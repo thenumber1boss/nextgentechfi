@@ -1,0 +1,226 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #2a4d41;
+    position: relative;
+    padding: 20px;
+  }
+  
+  .footer .info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40%;
+  }
+  
+  .footer .info-group,
+  .footer .contact-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+    color: #ffffff;
+    margin-top: 20px;
+  }
+  
+  .footer .tech-fi-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 10px 20px;
+  }
+  
+  .footer .tech-fi {
+    height: 53px;
+    object-fit: cover;
+    width: 100%;
+  }
+  
+  .footer .p {
+    font-family: "lato", Helvetica;
+    font-size: 24px;
+    margin: 10px 0;
+  }
+  
+  .footer .socials {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+  }
+  
+  .footer .socials img {
+    height: 40px;
+    width: 40px;
+  }
+  
+  .footer .contact-group .contact-title {
+    font-family: "Lato-Medium", Helvetica;
+    font-size: 32px;
+    text-decoration: underline;
+    margin-bottom: 10px;
+  }
+  
+  .footer .contact-info,
+  .footer .image {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .footer .contact-info .call,
+  .footer .image .img {
+    height: 40px;
+    width: 40px;
+  }
+  
+  .footer .contact-info .phone-number,
+  .footer .image .email {
+    font-family: "lato", Helvetica;
+    font-size: 16px;
+  }
+  
+  .footer .line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .footer .line img {
+    height: 2px;
+    object-fit: cover;
+    margin: 15px 0;
+    width: 90%;
+  }
+  
+  .footer .rights-reserved {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "lato", Helvetica;
+    text-align: center;
+    color: #ffffff; 
+    gap: 20%;
+  }
+  
+  .footer .rights-reserved p,
+  .footer .privacy-policy,
+  .footer .terms-of-use {
+    margin: 5px 0;
+  }
+  
+  .footer .privacy-group {
+    display: inline-flex;
+    gap: 20px;
+  }
+  
+  .footer .privacy-policy,
+  .footer .terms-of-use {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .footer .info {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 30px;
+      gap: 20px;
+    }
+  
+    .footer .rights-reserved {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer .socials img, .footer .contact-info .call, .footer .image .img {
+        height: 30px;
+        width: 30px;
+    }
+
+    .footer .contact-info .phone-number,
+    .footer .image .email,
+    .footer .p {
+      font-size: 18px;
+    }
+
+    .footer .rights-reserved .copyright-grit,
+    .footer .rights-reserved .privacy-policy,
+    .footer .rights-reserved .terms-of-use {
+        font-size: 14px;
+    }
+
+    .footer .contact-group .contact-title {
+        font-size: 24px;
+      }
+  }
+  
+  @media (max-width: 480px) {
+    .footer {
+      padding: 10px;
+    }
+
+    .footer .info {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 0px 10px;
+        justify-content: space-between;
+    }
+  
+    .footer .info-group,
+    .footer .contact-group {
+      align-items: flex-start;
+    }
+  
+    .footer .contact-info .phone-number,
+    .footer .image .email,
+    .footer .p {
+      font-size: 14px;
+    }
+  
+    .footer .socials img,
+    .footer .contact-info .call,
+    .footer .image .img {
+      height: 20px;
+      width: 20px;
+    }
+  
+    .footer .line img {
+      width: 100%;
+      margin: 10px 0;
+      height: 1px;
+    }
+
+    .footer .tech-fi-wrapper {
+        padding: 8px 10px;
+        border-radius: 2px;
+    }
+
+    .footer .tech-fi {
+        height: 30px;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .footer .socials {
+        margin-top: 5px;
+  }
+
+  .footer .contact-group .contact-title {
+    font-size: 18px;
+}
+.footer .rights-reserved .copyright-grit,
+.footer .rights-reserved .privacy-policy,
+.footer .rights-reserved .terms-of-use {
+    font-size: 9px;
+    margin: 0;
+}
+}
+  

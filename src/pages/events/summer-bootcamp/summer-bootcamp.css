@@ -1,0 +1,404 @@
+.summer-bootcamp {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Styles for benefit section */
+.benefits {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 80px; 
+}
+
+.benefits .section-heading {
+  color: #000000;
+  font-family: "Montserrat-Semi-Bold", Helvetica;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-bottom: 20px;
+}
+
+.benefit-card-frame {
+  display: grid;
+  gap: 35px;
+  margin-bottom: 40px;
+}
+
+.three-per-row {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.two-per-row {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.one-per-row {
+  grid-template-columns: 1fr;
+}
+
+.benefits .frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #007bff;
+  height: 108px;
+  position: relative;
+  margin: 0px -80px;
+}
+.benefits .frame .text-wrapper {
+  color: #ffffff;
+  font-family: "Lato-SemiBold", Helvetica;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 55px;
+  
+}
+
+/* Adjust padding and grid layout for medium screens */
+@media (max-width: 780px) {
+  .benefits {
+    padding: 40px 80px;
+  }
+}
+
+/* Adjust padding for larger screens */
+@media (max-width: 480px) {
+  .benefits {
+    padding: 20px;
+  }
+
+  .benefits .frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #007bff;
+    height: 40px;
+    position: relative;
+    padding: 10px 30px;
+    text-align: center;
+    margin: 0px -20px;
+  }
+
+  .benefits .frame .text-wrapper {
+    font-size: 14px;
+    font-weight: 600;
+    
+  }
+
+  .benefits .section-heading {
+    font-family: "Montserrat-Semi-Bold", Helvetica;
+    font-size: 28px;
+  }
+}
+
+
+
+/* Styles for partners section */
+
+.partners {
+  display: flex;
+  flex-direction: column;
+  background-color: #28a7451a;
+  position: relative;
+  gap: 45px;
+  padding: 150px 80px;
+}
+  
+.partners .grit {
+  display: flex;
+  gap: 60px;
+}
+
+.partners .grit-media-removebg-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 16px;
+  width: 300px;
+  padding: 20px;
+}
+
+.partners .grit-media-removebg {
+  width: 280px;
+  height: auto;
+  object-fit: cover;
+}
+
+.partners .text-wrapper {
+  color: #000000;
+  font-family: "Montserrat-Medium", Helvetica;
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: normal;
+}
+
+.partners .group-6 {
+  width: 90%;
+}
+
+.partners .text-wrapper-3 {
+  color: var(--gray-600);
+  font-family: "Lato-Regular", Helvetica;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 43px;
+}
+
+.partners .text-wrapper-4 {
+  color: var(--gray-600);
+  font-family: "lato-Regular", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 39.6px;
+  white-space: nowrap;
+}
+
+.partners .group-4 {
+  display: flex;
+  flex-direction: column;
+  height: 139px;
+  justify-content: flex-end;
+  width: 303px;
+}
+
+.partners .text-wrapper-2 {
+  color: #000000;
+  font-family: "Montserrat-Medium", Helvetica;
+  font-size: 36px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 2;
+}
+
+.partners .line {
+  height: 2px;
+  left: 0;
+  top: 68px;
+  width: 100%;
+}
+
+.partners .our-p-artners {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.partners .group {
+  display: grid;
+  gap: 40px; /* Reduced gap for better spacing */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusts columns to fit screen size */
+  justify-content: center; /* Centers the content */
+  position: relative;
+  width: 100%; /* Ensure it takes the full width */
+  padding: 20px; /* Add some padding */
+}
+
+
+.partners .frame {
+  align-items: flex-start;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 24px;
+}
+
+.partners .img {
+  height: 248px;
+  position: relative;
+  width: 519px;
+}
+
+.partners .div {
+  margin-right: -2px;
+  position: relative;
+}
+
+.partners .div-wrapper {
+  height: 240px;
+}
+
+.partners .p {
+  color: var(--gray-600);
+  font-family: "Lato-Regular", Helvetica;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 48px;
+}
+
+
+.partners .planrt-logo-removebg-wrapper {
+  background-color: #ffffff;
+  border-radius: 16px;
+  height: 248px;
+  overflow: hidden;
+  position: relative;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.partners .planrt-logo-removebg {
+  height: 214px;
+  object-fit: cover;
+  width: 158px;
+}
+
+.partners .group-2 {
+  display: flex;
+  flex-direction: column;
+  margin-right: -2px;
+  position: relative;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .partners {
+    gap: 30px;
+    padding: 80px 80px;
+  }
+  .partners .grit {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.partners .text-wrapper-3 {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.partners .group-4 {
+  display: flex;
+  flex-direction: column;
+  height: 69px;
+  width: 303px;
+}
+
+.partners .grit-media-removebg-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 16px;
+  width: 519px;
+  padding: 0px;
+}
+
+
+  .partners .our-p-artners {
+    flex-direction: column;
+}
+
+.partners .group {
+  flex-direction: column;
+  gap: 80px;
+}
+
+.partners .p {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.partners .group-6 {
+  width: 100%;
+}
+
+.partners .text-wrapper {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.partners .frame {
+  gap: 28px;
+}
+  
+}
+
+@media (max-width: 480px) {
+  .partners {
+    gap: 30px;
+    padding: 80px 20px;
+  }
+  .partners .grit {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.partners .text-wrapper-3 {
+  font-size: 14px;
+  line-height: 28px;
+}
+
+.partners .group-4 {
+  width: 200px;
+}
+
+.partners .grit-media-removebg {
+  height: 100%;
+  object-fit: cover;
+  width: auto;
+}
+
+
+.partners .text-wrapper-2 {
+  font-family: "Montserrat-Medium", Helvetica;
+  font-size: 28px;
+}
+.partners .grit-media-removebg-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 16px;
+  width: 100%;
+  height: 150px;
+  padding: 0px;
+}
+
+
+  .partners .our-p-artners {
+    flex-direction: column;
+}
+
+.partners .group {
+  flex-direction: column;
+  gap: 80px;
+}
+
+.partners .p {
+  font-size: 14px;
+  line-height: 28px;
+}
+
+.partners .planrt-logo-removebg-wrapper {
+  width: 100%;
+  height: 150px;
+}
+
+.partners .img,
+.partners .planrt-logo-removebg {
+  height: 100%;
+  width: auto;
+}
+
+.partners .text-wrapper {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.partners .frame {
+  gap: 28px;
+}
+
+}

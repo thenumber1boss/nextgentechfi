@@ -1,0 +1,137 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 80px;
+}
+
+.main-container .reg-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 80px;
+    background-color: #ffffff81;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.main-container .reg-header .tech-fi {
+    width: 178px;
+    height: auto;
+}
+
+.main-container .reg-body {
+    position: relative;
+    margin-top: 10%;
+    display: flex;
+
+}
+
+.main-container .timeline {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    position: fixed;
+    margin-top: 60px;
+    height: 100vh;
+}
+
+.main-container .form-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    flex: 1;
+    left: 30%;
+    padding: 0px 40px 80px;
+
+}
+
+.main-container .form-container h2 {
+    margin-bottom: 10px;
+    max-width: 70%;
+}
+
+.main-container .form-container .form-subheading {
+    margin-bottom: 60px;
+    color: var(--grey-700); 
+}
+
+.code-error-message {
+    font-family: "Lato-Regular", Helvetica;
+    color: var(--accent-colour);
+    text-decoration: underline;
+    z-index: 1001;
+    margin-top: -20px;
+    
+  }
+
+  .main-container .form-container .field-error {
+    display: flex;
+    flex-direction: column;
+  }
+
+.main-container .form,
+.main-container .successful-payment {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 80%;
+}
+
+.main-container .successful-payment {
+    margin-bottom: 40px;
+}
+
+.main-container .successful-payment h2 {
+    max-width: 100%;
+}
+
+.main-container .successful-payment p {
+    white-space: nowrap;
+} 
+
+.main-container .reg-btn-main {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    max-width: 100%;
+}
+
+.main-container .form .referral-div {
+    display: flex;
+    justify-content: space-between;
+    width: 498px;
+}
+
+.main-container .form .referral-div .referral-input {
+    width: 240px;
+}
+
+.main-container .flex-end {
+    justify-content: flex-end;
+}
+
+.main-container .primary-btn:hover {
+    cursor: pointer !important;
+}
+
+.main-container .primary-btn {
+    background-color: var(--secondary-colour) !important;
+    border: none !important;
+}
+
+
+
+
+.main-container .successful-payment .invite-txt {
+    color: var(--accent-colour);
+}
+
+.main-container .successful-payment .invite-code-wrapper {
+    padding: 10px 20px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.591);
+}

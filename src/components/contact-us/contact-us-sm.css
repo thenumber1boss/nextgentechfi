@@ -1,0 +1,87 @@
+.contact-us-sm {
+    background-image: url(../../assets/images/contact-us-sm-bg.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 293px;
+    display: flex;
+    position: relative;
+  }
+
+  .bg-light-blue {
+    background-color: #28a7451a;
+  }
+  
+  .bg-white {
+    background-color: #f8ffff;
+  }
+
+  .contact-us-sm .frame {
+    display: flex;
+    gap: 23px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .contact-us-sm .div {
+    -webkit-backdrop-filter: blur(10px) brightness(100%);
+    align-items: flex-start;
+    backdrop-filter: blur(10px) brightness(100%);
+    background-color: #ffffffcc;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    justify-content: flex-end;
+    padding: 10px 20px;
+    position: relative;
+    width: 100%;
+  }
+  .contact-us-sm .frame-2 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 6.78px;
+    position: relative;
+  }
+  .contact-us-sm .text-wrapper {
+    color: var(--black);
+    font-family: "Montserrat-Medium", Helvetica;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 6.8px;
+    margin-top: -0.28px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  .contact-us-sm .text-wrapper-2 {
+    color: var(--black);
+    font-family: "Montserrat-Bold", Helvetica;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.64px;
+    line-height: normal;
+    position: relative;
+    width: fit-content;
+  }
+  .contact-us-sm .for-enquiries {
+    color: transparent;
+    font-family: "Montserrat-Regular", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    opacity: 0.7;
+    position: relative;
+  }
+  .contact-us-sm .span {
+    color: #1e1e1e;
+  }
+  .contact-us-sm .text-wrapper-3 {
+    color: #007bff;
+  }
+  .contact-us-sm .text-wrapper-4 {
+    color: #28a745;
+  }

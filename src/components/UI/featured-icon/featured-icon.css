@@ -1,0 +1,17 @@
+.featured-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #c9e3ff;
+    border: 8px solid;
+    border-color: #e8f3ff;
+    border-radius: 28px;
+    height: 56px;
+    position: relative;
+    width: 56px;
+  }
+  
+  .featured-icon .icon {
+    height: 24px;
+    width: 24px;
+  }

@@ -1,0 +1,247 @@
+p, h1, h2, h3, h4, h5, h6, ul, li, ol {
+  margin: 0;
+}
+
+@media (min-width: 700px) {
+  p {
+    line-height: 35px !important;
+  }
+  }
+
+@media (max-width: 480px) {
+p {
+  line-height: 24px !important;
+}
+}
+
+
+.nav-link {
+  text-decoration: none !important;
+}
+
+ 
+
+
+:root {
+  --accent-colour: rgba(253, 126, 20, 1);
+  --avatar-user-squareolivia-rhye-color-background: rgba(207, 203, 220, 1);
+  --baseblack: rgba(0, 0, 0, 1);
+  --basewhite: rgba(255, 255, 255, 1);
+  --black: rgba(30, 30, 30, 1);
+  --black-whitewhite: rgba(255, 255, 255, 1);
+  --body-body-text-medium-font-family: "Lato", Helvetica;
+  --body-body-text-medium-font-size: 16px;
+  --body-body-text-medium-font-style: normal;
+  --body-body-text-medium-font-weight: 500;
+  --body-body-text-medium-letter-spacing: 0px;
+  --body-body-text-medium-line-height: 24px;
+  --brand-100: rgba(244, 235, 255, 1);
+  --brand-200: rgba(233, 215, 254, 1);
+  --brand-50: rgba(249, 245, 255, 1);
+  --brand-600: rgba(127, 86, 217, 1);
+  --brand-700: rgba(105, 65, 198, 1);
+  --brand-800: rgba(83, 56, 158, 1);
+  --gray-300: rgba(208, 213, 221, 1);
+  --gray-400: rgba(152, 162, 179, 1);
+  --gray-50: rgba(249, 250, 251, 1);
+  --gray-600: rgba(71, 84, 103, 1);
+  --gray-700: rgba(52, 64, 84, 1);
+  --gray-800: rgba(24, 34, 48, 1);
+  --gray-900: rgba(16, 24, 40, 1);
+  --primary-colour: rgba(0, 123, 255, 1);
+  --secondary-colour: rgba(40, 167, 69, 1);
+  --shadows-shadow-xs: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  --text-md-semibold-font-family: "Lato", Helvetica;
+  --text-md-semibold-font-size: 16px;
+  --text-md-semibold-font-style: normal;
+  --text-md-semibold-font-weight: 400;
+  --text-md-semibold-letter-spacing: 0px;
+  --text-md-semibold-line-height: 24px;
+  --text-sm-medium-font-family: "Lato", Helvetica;
+  --text-sm-medium-font-size: 14px;
+  --text-sm-medium-font-style: normal;
+  --text-sm-medium-font-weight: 400;
+  --text-sm-medium-letter-spacing: 0px;
+  --text-sm-medium-line-height: 20px;
+  --text-sm-regular-font-family: "Lato", Helvetica;
+  --text-sm-regular-font-size: 14px;
+  --text-sm-regular-font-style: normal;
+  --text-sm-regular-font-weight: 400;
+  --text-sm-regular-letter-spacing: 0px;
+  --text-sm-regular-line-height: 20px;
+  --text-sm-semibold-font-family: "Lato", Helvetica;
+  --text-sm-semibold-font-size: 14px;
+  --text-sm-semibold-font-style: normal;
+  --text-sm-semibold-font-weight: 400;
+  --text-sm-semibold-letter-spacing: 0px;
+  --text-sm-semibold-line-height: 20px;
+}
+
+/* Styles for buttons */
+.primary-btn {
+  all: unset !important;
+  align-items: center !important;
+  background-color: var(--primary-colour) !important;
+  border: 1px solid !important;
+  border-color: var(--primary-colour) !important;
+  border-radius: 16px !important;
+  box-shadow: var(--shadows-shadow-xs) !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  gap: 8px !important;
+  height: 48px !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  padding: 3px 32px !important;
+  position: relative !important;
+}
+
+
+
+
+
+
+.primary-btn-stretch {
+  all: unset !important;
+  align-items: center !important;
+  background-color: var(--primary-colour) !important;
+  border: 1px solid !important;
+  border-color: var(--primary-colour) !important;
+  border-radius: 16px !important;
+  box-shadow: var(--shadows-shadow-xs) !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  gap: 8px !important;
+  height: 48px !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  padding: 16px 32px !important;
+  position: relative !important;
+  align-self: stretch !important;
+}
+
+.primary-btn-txt {
+  color: #ffffff !important;
+  font-family: "Lato-SemiBold", Helvetica !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0 !important;
+  line-height: 43px !important;
+  white-space: nowrap !important;
+}
+
+.secondary-btn {
+  all: unset !important;
+  background-color: var(--basewhite) !important;
+  border: 1px solid !important;
+  border-color: var(--gray-300) !important;
+  align-items: center !important;
+  border-radius: 16px !important;
+  display: inline-flex !important;
+  gap: 8px !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  padding: 3px 32px !important;
+  position: relative !important;
+}
+
+.secondary-btn-txt {
+  color: var(--gray-700) !important;
+  font-family: "Lato-SemiBold", Helvetica !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0 !important;
+  line-height: 43px !important;
+  white-space: nowrap !important;
+
+}
+
+.secondary-btn-stretch {
+  all: unset !important;
+  align-items: center !important;
+  background-color: var(--basewhite) !important;
+  border: 1px solid !important;
+  border-radius: 16px !important;
+  box-shadow: var(--shadows-shadow-xs) !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  gap: 8px !important;
+  height: 48px !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  padding: 16px 32px !important;
+  position: relative !important;
+  align-self: stretch !important;
+}
+
+
+
+.neutral-btn {
+  all: unset !important;
+  align-items: center !important;
+  background-color: var(--basewhite) !important;
+  border: 1px solid !important;
+  border-color: var(--gray-300) !important;
+  border-radius: 16px !important;
+  box-shadow: var(--shadows-shadow-xs) !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  gap: 8px !important;
+  height: 48px !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  padding: 16px 32px !important;
+  position: relative !important;
+}
+
+.btn {
+  display: block !important;
+  width: fit-content !important;
+  margin-top: 32px !important;
+  text-align: center !important;
+  border: 1px solid #ffffff !important;
+  border-radius: 16px !important;
+  height: 48px;
+  padding: 3px 32px !important;
+}
+
+.primary-border {
+  border-color: var(--primary-colour) !important;
+}
+
+.accent-border {
+  border-color: var(--accent-colour) !important;
+}
+
+.primary-col-txt {
+  color: var(--primary-colour) !important;
+}
+
+
+
+.white-border {
+  border-color: var(--basewhite) !important;
+}
+
+
+.neutral-btn-txt {
+  color: #344053 !important;
+  font-family: "lato-SemiBold", Helvetica !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0 !important;
+  line-height: 43px !important;
+  white-space: nowrap !important;
+}
+
+@media (max-width: 480px) {
+  
+.primary-btn,
+.neutral-btn,
+.secondary-btn,
+.btn {
+  
+  padding: 3px 16px !important;
+}
+
+}

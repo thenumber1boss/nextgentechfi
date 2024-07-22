@@ -1,0 +1,106 @@
+.upcoming-event-sm {
+    align-items: center;
+    background-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-color: #d9d9d9;
+    border-top-style: solid;
+    border-top-width: 1px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .upcoming-event-sm .frame {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px 20px;
+    position: relative;
+  }
+  
+  .upcoming-event-sm .frame-2 {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .upcoming-event-sm .badge-group-instance {
+    flex: 0 0 auto !important;
+    margin-right: -2px !important;
+  }
+  
+  .upcoming-event-sm .div-wrapper {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+  }
+  
+  .upcoming-event-sm .text-wrapper {
+    align-self: stretch;
+    color: var(--black);
+    font-family: "Montserrat-SemiBold", Helvetica;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+  }
+  
+  .upcoming-event-sm .p {
+    align-self: stretch;
+    color: var(--black);
+    font-family: "Lato-Regular", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 28px;
+    margin-top: -1px;
+    position: relative;
+  }
+  
+  .upcoming-event-sm .actions {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 24px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .upcoming-event-sm .buttons-button-instance {
+    align-self: stretch !important;
+  }
+  
+  .upcoming-event-sm .design-component-instance-node {
+    align-self: stretch !important;
+    margin-bottom: -1px !important;
+    margin-left: -1px !important;
+    margin-right: -1px !important;
+  }
+  
+  .upcoming-event-sm .event-image {
+    height: auto;
+    object-fit: cover;
+    position: relative;
+    width: 100%;
+    border-radius: 13.31px;
+  }
+  

@@ -1,0 +1,398 @@
+.pop-up-notification {
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .pop-up-notification .div {
+    display: flex;
+    flex-direction: column;
+    background-color: #fafafaf2;
+    position: relative;
+    padding: 20px;
+    border-radius: 16px;
+    gap: 20px;
+}
+  
+  .pop-up-notification .first-div {
+    display: flex;
+    padding: 20px 40px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .pop-up-notification .tech-fi {
+    height: 45px;
+    object-fit: cover;
+    width: 167px;
+  }
+  
+  .pop-up-notification .overlap-group {
+    display: flex;
+    padding: 20px 40px;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .pop-up-notification .event-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 16px;
+    border: 1px solid var(--accent-colour);
+    padding: 5px 15px;
+  }
+  
+  .pop-up-notification .venue,
+  .pop-up-notification .date {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 400px;
+    gap: 20px;
+  }
+  
+  .pop-up-notification .frame-2 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .pop-up-notification .group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    width: 728px;
+  }
+  
+  .pop-up-notification .this-isn-t-just {
+    color: var(--black);
+    font-family: "Montserrat-SemiBold", Helvetica;
+    font-size: 20px;
+    font-weight: 600;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 24px;
+    top: 0;
+    width: 724px;
+  }
+  
+  .pop-up-notification .text-wrapper {
+    color: #1e1e1e;
+    line-height: 24px;
+  }
+  
+  .pop-up-notification .span {
+    color: #28a745;
+    line-height: 24px;
+  }
+  
+  .pop-up-notification .text-wrapper-2 {
+    color: #007bff;
+    line-height: 24px;
+  }
+  
+  .pop-up-notification .p {
+    color: #000000;
+    font-family: "Lato-Medium", Helvetica;
+    font-size: 16px;
+    font-weight: 500;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 20px;
+    top: 274px;
+    width: 724px;
+  }
+  
+  .pop-up-notification .frame-3 {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 32px;
+    position: relative;
+  }
+  
+  .pop-up-notification .lower-div {
+    display: flex;
+    padding: 10px 40px;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  
+  .pop-up-notification .text-wrapper-3 {
+    color: #000000;
+    font-family: "Montserrat-Regular", Helvetica;
+    font-size: 48px;
+    font-weight: 400;
+    left: 1200px;
+    letter-spacing: 0;
+    line-height: 24px;
+    top: 21px;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  
+  .pop-up-notification .vuesax-linear {
+    height: 40px;
+    left: 13px;
+    top: 13px;
+    width: 40px;
+  }
+  
+  .pop-up-notification .text-wrapper-4 {
+    color: #000000;
+    font-family: "Montserrat-SemiBold", Helvetica;
+    font-size: 24px;
+    font-weight: 600;
+    left: 69px;
+    letter-spacing: 1px;
+    line-height: 29.8px;
+    top: 17px;
+    white-space: nowrap;
+  }
+  
+  .pop-up-notification .discount-div {
+    display: flex;
+    gap: 100px;
+  }
+  
+  .pop-up-notification .frame-4 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding: 0px 20px;
+    background-color: #007bff33;
+    height: 42px;
+    width: 239px;
+  }
+  
+  .pop-up-notification .frame {
+    background-color: #fd7e14cc;
+    border: 1px solid;
+    border-color: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+  }
+  
+  .pop-up-notification .vector {
+    height: 61px;
+    margin-top: -20px;
+    width: 190px;
+  }
+  
+  .pop-up-notification .element-discount-for {
+    display: flex;
+    color: var(--black);
+    font-family: "Montserrat-Bold", Helvetica;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 29.8px;
+  }
+  
+  /* Media Queries for Responsiveness */
+  
+  @media (max-width: 1024px) {
+    .pop-up-notification .first-div,
+    .pop-up-notification .overlap-group,
+    .pop-up-notification .lower-div {
+      padding: 10px 20px;
+    }
+  
+    .pop-up-notification .group {
+      width: 100%;
+      height: auto;
+    }
+  
+
+    .pop-up-notification .this-isn-t-just {
+      font-size: 35px;
+      line-height: 42px;
+      width: 80%;
+    }
+
+    .pop-up-notification .p {
+      font-size: 24px;
+      line-height: 30px;
+      width: 80%;
+    }
+  
+    .pop-up-notification .text-wrapper,
+    .pop-up-notification .span,
+    .pop-up-notification .text-wrapper-2 {
+      line-height: 56px;
+    }
+  
+    .pop-up-notification .text-wrapper-3 {
+      font-size: 30px;
+      line-height: 56px;
+    }
+  
+    .pop-up-notification .vuesax-linear {
+      height: 30px;
+      width: 30px;
+    }
+  
+    .pop-up-notification .text-wrapper-4 {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  
+    .pop-up-notification .frame-4 {
+      height: 60px;
+      width: 180px;
+    }
+  
+    .pop-up-notification .frame {
+      height: 100px;
+      width: 200px;
+    }
+  
+    .pop-up-notification .vector {
+      height: 50px;
+      width: 150px;
+    }
+  
+
+    .pop-up-notification .discount-div {
+        gap: 18px;
+    }
+    .pop-up-notification .element-discount-for {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .pop-up-notification .first-div,
+    .pop-up-notification .overlap-group,
+    .pop-up-notification .lower-div {
+      padding: 5px 10px;
+    }
+
+    .pop-up-notification .this-isn-t-just {
+      font-size: 28px;
+      line-height: 32px;
+    }
+  
+  
+    .pop-up-notification .p {
+      font-size: 20px;
+      line-height: 32px;
+    }
+  
+    .pop-up-notification .text-wrapper,
+    .pop-up-notification .span,
+    .pop-up-notification .text-wrapper-2 {
+      line-height: 35px;
+    }
+  
+    .pop-up-notification .text-wrapper-3 {
+      font-size: 28px;
+      line-height: 43px;
+    }
+  
+    .pop-up-notification .vuesax-linear {
+      height: 24px;
+      width: 24px;
+    }
+  
+    .pop-up-notification .text-wrapper-4 {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  
+    .pop-up-notification .frame-4 {
+      height: 50px;
+      width: 150px;
+    }
+  
+    .pop-up-notification .frame {
+      height: 60px;
+      width: 160px;
+    }
+  
+    .pop-up-notification .vector {
+      height: 40px;
+      width: 120px;
+    }
+  
+    .pop-up-notification .element-discount-for {
+      font-size: 16px;
+      line-height: 22px !important;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .pop-up-notification .first-div,
+    .pop-up-notification .overlap-group,
+    .pop-up-notification .lower-div {
+      padding: 5px;
+    }
+  
+    .pop-up-notification .this-isn-t-just {
+      font-size: 25px;
+      line-height: 30px;
+      width: 90%;
+    }
+
+    .pop-up-notification .p {
+      font-size: 12px;
+      line-height: 24px;
+    }
+  
+    .pop-up-notification .text-wrapper,
+    .pop-up-notification .span,
+    .pop-up-notification .text-wrapper-2 {
+      line-height: 20px;
+    }
+  
+    .pop-up-notification .text-wrapper-3 {
+      font-size: 20px;
+      line-height: 20px;
+    }
+  
+    .pop-up-notification .vuesax-linear {
+      height: 20px;
+      width: 20px;
+    }
+  
+    .pop-up-notification .text-wrapper-4 {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  
+
+    .pop-up-notification .frame-2 {
+      gap: 15px;
+  }
+    .pop-up-notification .frame-4 {
+      height: 30px;
+      width: 120px;
+    }
+  
+    .pop-up-notification .frame {
+      height: 30px;
+      width: 120px;
+    }
+  
+    .pop-up-notification .vector {
+      display: none;
+    }
+  
+    .pop-up-notification .element-discount-for {
+      font-size: 12px;
+      line-height: 18px !important;
+    }
+  }
+  

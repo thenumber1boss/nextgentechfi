@@ -1,0 +1,249 @@
+/* Base styles */
+.header {
+  background-color: #f7f7f7;
+  height: 101px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(247, 247, 247, 1);
+}
+
+/* Remove underline from links */
+.header .nav-link {
+  text-decoration: none;
+}
+
+/* Optional: Add hover effect */
+.header .nav-link .text-wrapper:hover,
+.header .nav-link .div:hover {
+  color: var(--secondary-colour); 
+  text-decoration: none; 
+}
+
+/* Optional: Add hover effect */
+.header .nav-link.active .text-wrapper:hover,
+.header .nav-link.active .div:hover {
+  color: var(--primary-colour); 
+}
+
+.inactive {
+  pointer-events: none;
+}
+
+.header .active .div {
+  font-weight: bold;
+  color: var(--primary-colour);
+}
+
+
+
+
+.header .pages {
+  align-items: flex-start;
+  display: inline-flex;
+  gap: 16px;
+  padding: 16px;
+  align-items: center;
+}
+
+.header .frame {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  justify-content: center;
+  padding: 10px 12px;
+}
+
+.header .div {
+  color: #000000;
+  font-family: "Lato-Regular", Helvetica;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 32px;
+  margin-top: -1px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.header .tech-fi {
+  height: 36px;
+  object-fit: cover;
+  width: 135px;
+}
+
+.header .vuesax-linear-search-wrapper {
+  align-items: flex-start;
+  background-color: #ffffff;
+  border-radius: 16px;
+  display: flex;
+  gap: 10px;
+  padding: 10px 16px;
+  height: 3.5vh;
+  width: 249px;
+}
+
+.header .vuesax-linear-search {
+  height: 24px !important;
+  position: relative !important;
+  width: 24px !important;
+  display: flex !important;
+}
+
+.searchBar {
+  border: none !important;
+  width: 137px !important;
+  font-size: large;
+}
+
+.header .design-component-instance-node {
+  color: #ffffff !important;
+  font-family: "Lato-Regular", Helvetica !important;
+  font-size: 20px !important;
+  font-weight: 400 !important;
+}
+
+.hamburgerIcon-instance {
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: row;
+    height: auto;
+    padding: 5px 0 5px 0;
+    align-items: center;
+  }
+
+  .header .tech-fi {
+    position: static;
+    margin: 10px 0;
+  }
+
+  .header .pages {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .header .frame {
+    padding: 8px 10px;
+  }
+
+  .header .vuesax-linear-search-wrapper {
+    width: fit-content;
+    height: auto;
+  }
+
+  .searchBar {
+    width: 100%;
+  }
+
+  /* .header .design-component-instance-node {
+      margin-top: 10px;
+    } */
+}
+
+@media (max-width: 480px) {
+  .header .div {
+    font-size: 16px;
+  }
+
+  .header .vuesax-linear-search-wrapper {
+    padding: 8px 10px;
+  }
+
+  .searchBar {
+    font-size: medium;
+  }
+
+  .header .design-component-instance-node {
+    font-size: 18px;
+  }
+
+  .header .hide {
+    display: none !important;
+  }
+
+  .vuesax-linear-search-wrapper {
+    height: auto;
+    display: inline-flex;
+    gap: 20px;
+    padding: 2px 3px;
+    background-color: rgba(247, 247, 247) !important;
+  }
+
+  .searchBar {
+    display: none;
+  }
+
+  .hamburgerIcon-instance {
+    display: block;
+    height: fit-content;
+    margin-left: 1rem;
+  }
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: fit-content;
+    background-color: white;
+    z-index: 1000;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px 20px 20px;
+    width: 402px;
+    border: 2px solid gray;
+    border-radius: 10px;
+  }
+  .mobile-menu .top-header {
+    width: 342px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .mobile-menu .iconoir-cancel {
+    cursor: pointer;
+    /* margin-bottom: 2; */
+    width: 20px;
+  }
+  .mobile-menu .frame {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 342px;
+    position: relative;
+  }
+
+  .mobile-menu.active {
+    display: flex;
+  }
+
+  .mobile-menu .div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .mobile-menu .button-2 {
+    width: 80%;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .mobile-menu .text-wrapper {
+    display: block;
+    padding: 0.5rem;
+  }
+}
