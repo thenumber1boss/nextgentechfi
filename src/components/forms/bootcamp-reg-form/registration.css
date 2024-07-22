@@ -3,9 +3,9 @@
     flex-direction: column;
     gap: 40px;
     padding: 40px 80px;
-}
-
-.main-container .reg-header {
+  }
+  
+  .main-container .reg-header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -17,121 +17,178 @@
     background-color: #ffffff81;
     z-index: 1000;
     backdrop-filter: blur(10px);
-}
-
-.main-container .reg-header .tech-fi {
+  }
+  
+  .main-container .reg-header .tech-fi {
     width: 178px;
     height: auto;
-}
-
-.main-container .reg-body {
+  }
+  
+  .main-container .reg-body {
     position: relative;
     margin-top: 10%;
     display: flex;
-
-}
-
-.main-container .timeline {
+  }
+  
+  .main-container .timeline {
     display: flex;
     flex-direction: column;
     width: 30%;
     position: fixed;
     margin-top: 60px;
     height: 100vh;
-}
-
-.main-container .form-container {
+  }
+  
+  .main-container .form-container {
     display: flex;
     flex-direction: column;
     position: absolute;
     flex: 1;
     left: 30%;
     padding: 0px 40px 80px;
-
-}
-
-.main-container .form-container h2 {
+  }
+  
+  .main-container .form-container h2 {
     margin-bottom: 10px;
     max-width: 70%;
-}
-
-.main-container .form-container .form-subheading {
+  }
+  
+  .main-container .form-container .form-subheading {
     margin-bottom: 60px;
     color: var(--grey-700); 
-}
-
-.code-error-message {
+  }
+  
+  .code-error-message {
     font-family: "Lato-Regular", Helvetica;
     color: var(--accent-colour);
     text-decoration: underline;
     z-index: 1001;
     margin-top: -20px;
-    
   }
-
+  
   .main-container .form-container .field-error {
     display: flex;
     flex-direction: column;
   }
-
-.main-container .form,
-.main-container .successful-payment {
+  
+  .main-container .form,
+  .main-container .successful-payment {
     display: flex;
     flex-direction: column;
     gap: 30px;
     width: 80%;
-}
-
-.main-container .successful-payment {
+  }
+  
+  .main-container .successful-payment {
     margin-bottom: 40px;
-}
-
-.main-container .successful-payment h2 {
+  }
+  
+  .main-container .successful-payment h2 {
     max-width: 100%;
-}
-
-.main-container .successful-payment p {
+  }
+  
+  .main-container .successful-payment p {
     white-space: nowrap;
-} 
-
-.main-container .reg-btn-main {
+  } 
+  
+  .main-container .reg-btn-main {
     display: flex;
     justify-content: space-between;
     padding-top: 20px;
     max-width: 100%;
-}
-
-.main-container .form .referral-div {
+  }
+  
+  .main-container .form .referral-div {
     display: flex;
     justify-content: space-between;
     width: 498px;
-}
-
-.main-container .form .referral-div .referral-input {
+  }
+  
+  .main-container .form .referral-div .referral-input {
     width: 240px;
-}
-
-.main-container .flex-end {
+  }
+  
+  .main-container .flex-end {
     justify-content: flex-end;
-}
-
-.main-container .primary-btn:hover {
+  }
+  
+  .main-container .primary-btn:hover {
     cursor: pointer !important;
-}
-
-.main-container .primary-btn {
+  }
+  
+  .main-container .primary-btn {
     background-color: var(--secondary-colour) !important;
     border: none !important;
-}
-
-
-
-
-.main-container .successful-payment .invite-txt {
+  }
+  
+  .main-container .successful-payment .invite-txt {
     color: var(--accent-colour);
-}
-
-.main-container .successful-payment .invite-code-wrapper {
+  }
+  
+  .main-container .successful-payment .invite-code-wrapper {
     padding: 10px 20px;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.591);
-}
+  }
+  
+  @media (max-width: 768px) {
+    .main-container {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      padding: 40px 20px;
+    }
+  
+    .main-container .timeline {
+      display: none;
+    }
+  
+    .main-container .reg-body {
+      position: relative;
+      margin-top: 18%;
+      display: flex;
+    }
+  
+    .main-container .form-container {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      left: 0;
+      padding: 20px;
+    }
+
+    .main-container .form, .main-container .successful-payment {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        width: 100%;
+    }
+  
+    .main-container .form-container h2 {
+      margin-bottom: 10px;
+      max-width: 100%;
+    }
+
+    .main-container .form .referral-div .referral-input {
+        width: 100%;
+    }
+  
+    .main-container .form .referral-div {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .main-container .form .referral-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      .main-container .successful-payment p {
+        white-space: wrap;
+    }
+    
+  }

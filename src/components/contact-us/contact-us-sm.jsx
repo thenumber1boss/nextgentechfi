@@ -1,10 +1,11 @@
 
   import React from "react";
   import "./contact-us-sm.css"
+  import SmBg from "../../assets/images/contact-us-sm-bg.jpg"
 
 const ContactUsSm = ({ backgroundColorClass }) => {
   return (
-    <div className={`contact-us-sm ${ backgroundColorClass }`} id="contactUs">
+<div className={`contact-us-sm ${backgroundColorClass}`} id="contactUs" style={{ backgroundImage: `url(${SmBg})` }}>
       <div className="frame">
         <div className="div">
           <div className="frame-2">

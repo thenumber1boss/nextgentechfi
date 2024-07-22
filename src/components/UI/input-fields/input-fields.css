@@ -1,47 +1,68 @@
 .input-fields {
-    height: 89px;
+  height: 89px;
+  position: relative;
+  width: 498px;
+  margin-bottom: 20px;
+}
+
+.input-fields .frame {
+  background-color: #ffffff;
+  border: 0.8px solid;
+  border-color: #1e1e1e;
+  border-radius: 16px;
+  padding: 20px;
+  position: relative;
+}
+
+.input-fields .label {
+  color: var(--black-and-whiteblack);
+  font-family: "Montserrat-Regular", Helvetica;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  background-color: white;
+  padding: 0 5px;
+}
+
+.input-fields .input {
+  width: 90%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 10px 0;
+  font-family: "Latot-Regular", Helvetica;
+  color: #1e1e1e;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.545);
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.input-fields .error-message {
+  font-family: "Lato-Regular", Helvetica;
+  color: var(--accent-colour);
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .input-fields {
+    display: flex;
+    height: auto;
     position: relative;
-    width: 498px;
+    width: 100%;
+    align-self: stretch;
     margin-bottom: 20px;
   }
-  
+
   .input-fields .frame {
-    background-color: #ffffff;
-    border: 0.8px solid;
-    border-color: #1e1e1e;
-    border-radius: 16px;
+    width: 100%; 
     padding: 20px;
-    position: relative;
-  }
-  
-  .input-fields .label {
-    color: var(--black-and-whiteblack);
-    font-family: "Montserrat-Regular", Helvetica;
-    font-size: 20px;
-    font-weight: 400;
-    position: absolute;
-    top: -10px;
-    left: 20px;
-    background-color: white;
-    padding: 0 5px;
-  }
-  
-  .input-fields .input {
-    width: 90%;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    padding: 10px 0;
-    font-family: "Latot-Regular", Helvetica;
-    color: #1e1e1e;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.545);
-    border-radius: 5px;
-    padding: 5px 10px;
+    box-sizing: border-box; 
   }
 
-  .input-fields .error-message {
-    font-family: "Lato-Regular", Helvetica;
-    color: var(--accent-colour);
-    text-decoration: underline;
-    
+  .input-fields .input {
+    width: 92%;
+    padding: 5px 10px;
   }
+}
