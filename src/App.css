@@ -205,6 +205,17 @@ p {
   padding: 3px 32px !important;
 }
 
+.nav-link.full-width {
+  align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 24px;
+    position: relative;
+    width: 100%;
+}
+
 .primary-border {
   border-color: var(--primary-colour) !important;
 }

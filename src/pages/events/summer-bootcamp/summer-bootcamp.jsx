@@ -135,16 +135,16 @@ export const HeroSm = () => {
             </div>
             
             <div className="frame">
-            <NavLink to="/register" className="nav-link">
+            <NavLink to="/register" className="nav-link full-width">
               <Button state="primary" 
-              className="primary-btn"
+              className="primary-btn-stretch"
               divClassName="primary-btn-txt"
               text="Register"
               />
              </NavLink>
-           <a href={`tel:${phoneNumber}`} className="nav-link">
+           <a href={`tel:${phoneNumber}`} className="nav-link full-width">
                 <Button state="secondary" 
-                className="secondary-btn primary-border" 
+                className="secondary-btn-stretch primary-border" 
                 divClassName="secondary-btn-txt primary-col-txt" 
                 text="Reserve a seat"
                 />

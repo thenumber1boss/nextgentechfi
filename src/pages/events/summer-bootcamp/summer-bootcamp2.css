@@ -95,6 +95,7 @@
 
 .hero-frame .frame {
   display: flex;
+  width: 100%;
   gap: 24px;
 }
 
@@ -274,6 +275,13 @@
     font-size: 16px;
     line-height: 32px;
 }
+
+.hero-frame .frame {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
 
 .hero-frame .text-wrapper-4 {
   font-weight: 600;

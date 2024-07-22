@@ -27,11 +27,11 @@ const Footer = () => {
             <div className="contact-title">Contact us</div>
             <div className="contact-info">
             <img className="call" alt="call icon" src={call} />
-            <div className="phone-number">23400000000000</div>
+            <div className="phone-number">+2348131140937</div>
             </div>
             <div className="image">
             <img className="img" alt="sms" src={email} />
-            <div className="email">www@gmail.com</div>
+            <div className="email">admin@gritinformedia.tech</div>
             </div>
         </div>
       </div>

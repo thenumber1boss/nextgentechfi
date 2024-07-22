@@ -18,11 +18,11 @@ const ContactUsSm = ({ backgroundColorClass }) => {
               Email us at
             </span>
             <span className="text-wrapper-3">
-              admin@gritinformedmedia.tech
+              admin@nextgentechfi.com
               <br />
             </span>
             <span className="span">Or send us a message on WhatsApp with </span>
-            <span className="text-wrapper-4">+234813 114 0937</span>
+            <span className="text-wrapper-4">+2347019102780</span>
           </p>
         </div>
       </div>

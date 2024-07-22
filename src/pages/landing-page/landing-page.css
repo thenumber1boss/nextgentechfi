@@ -211,7 +211,7 @@
 
   .hero-next-gen .frame {
     width: 100%;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 
   .hero-next-gen .heading.small-screen {
