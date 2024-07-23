@@ -123,6 +123,7 @@ const SuccessfulPayment = () => {
             </div>
           </div>
           <div className='reg-btn-main'>
+           {/*
             <Button
               className="secondary-btn"
               divClassName="secondary-btn-txt"
@@ -131,11 +132,12 @@ const SuccessfulPayment = () => {
               type="submit"
               onClick={HandleCancel}
             />
+            */}
             <Button
               className="primary-btn"
               divClassName="primary-btn-txt"
               state="primary"
-              text="Continue Registration"
+              text="Close"
               type="button"
               onClick={HandleContinueRegistration}
             />

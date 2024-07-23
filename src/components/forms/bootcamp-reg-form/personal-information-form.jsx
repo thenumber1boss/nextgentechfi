@@ -42,6 +42,8 @@ const validationSchema = Yup.object().shape({
 
 const PersonalInformation = () => {
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
+  const [serverProcessing, setServerProcessing] = useState(false);
   const {
     register,
     handleSubmit,
@@ -54,6 +56,7 @@ const PersonalInformation = () => {
   const [errorMessage, setErrorMessage] = useState('');
 
   const onSubmit = async (data) => {
+    setLoading(true);
 
     try {
       // Validate invite and school codes by querying the server
@@ -114,6 +117,7 @@ const PersonalInformation = () => {
           ]
         },
         onSuccess: async (transaction) => {
+          setServerProcessing(true); // Set server processing state to true
           console.log('Payment successful:', transaction);
 
           try {
@@ -131,6 +135,7 @@ const PersonalInformation = () => {
             if (response.ok) {
               console.log('Transaction verified successfully on server:', result);
              // Include the transaction reference in the callback URL
+             setServerProcessing(false); // Set server processing state to false
               const successfulPaymentUrl = `/successful-payment?reference=${transaction.reference}`;
               navigate(successfulPaymentUrl);
             } else {
@@ -153,11 +158,20 @@ const PersonalInformation = () => {
     } catch (error) {
       console.error('Error validating codes:', error); // Logs error to the console
       setErrorMessage('Error validating codes: ' + error.message);
+    } finally {
+      setLoading(false);
     }
   };
 
 
   return (
+    <>
+    {serverProcessing ? (
+        <div className="loading-placeholder">
+          <p className='loading-text'>Please wait...</p>
+        </div>
+      ) : (
+    
     <div className='main-container'>
       <header className="reg-header">
         <img className="tech-fi" alt="Tech fi" src={NextGenLogo} />
@@ -276,12 +290,15 @@ const PersonalInformation = () => {
                 state="primary"
                 text="Proceed to Payment"
                 type="submit"
+                loading={loading}
               />
             </div>
           </form>
         </div>
       </div>
     </div>
+      )}
+      </>
   );
 }
 

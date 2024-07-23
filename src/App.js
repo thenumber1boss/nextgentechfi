@@ -15,7 +15,7 @@ function App() {
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<LandingPage />} />
-          <Route path="/summer-bootcamp" element={<SummerBootcamp />} />
+          <Route path="/bootcamp" element={<SummerBootcamp />} />
           <Route path="/register" element={<PersonalInformation />} />
           <Route path="/successful-payment" element={<SuccessfulPayment />} />
           <Route path="/complete-registration1" element={<CompleteRegistration1 />} />

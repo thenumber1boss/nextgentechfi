@@ -46,7 +46,7 @@ export const Hero = () => {
               <img className="hero-image" src={HeroImg} alt="HeroImage" />
               <div className="group">
                 <div className="div-wrapper">
-                  <div className="text-wrapper">For ages 16-22</div>
+                  <div className="text-wrapper">For ages 15-30</div>
                 </div>
               </div>
             </div>
@@ -391,7 +391,7 @@ export const Benefits = () => {
         </div>
       )}
       <div className="frame">  
-      <p className="text-wrapper">Register before August 11th to receive an 18% discount!</p> 
+      <p className="text-wrapper">Register before August 11th to receive an 53% discount!</p> 
       </div>
     </div>
   );

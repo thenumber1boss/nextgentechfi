@@ -73,7 +73,7 @@ const PopUpNotification = ({closeModal}) => {
             <img className="vector" alt="Vector" src={PopUpVector} />
             <div className="frame">
             <p className="element-discount-for">
-                18 % discount <br />
+                53% discount <br />
                 for early birds!!!
             </p>
             </div>
