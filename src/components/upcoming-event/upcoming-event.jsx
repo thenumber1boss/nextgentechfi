@@ -31,7 +31,7 @@ const UpcomingEvent = ({ badge, image, heading, supportingText, button1Text, but
                       divClassName="primary-btn-txt"
                        text={button1Text} />
                        </NavLink>
-                       <NavLink to="/summer-bootcamp" className="nav-link">
+                       <NavLink to="/bootcamp" className="nav-link">
                       <Button state="secondary"
                       className="neutral-btn"
                       divClassName="neutral-btn-txt"

@@ -22,7 +22,7 @@ const UpcomingEventSm = ({ badge, image, heading, supportingText, button1Text, b
           </div>
           
           <div className="actions">
-          <NavLink to="/summer-bootcamp" className="nav-link full-width">
+          <NavLink to="/bootcamp" className="nav-link full-width">
             <Button state="secondary" 
             className="secondary-btn-stretch primary-border" 
             divClassName="secondary-btn-txt"

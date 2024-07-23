@@ -49,7 +49,7 @@ const PopUpNotification = ({closeModal}) => {
               </div>
             </div>
             <div className="frame-3">
-             <NavLink to="./summer-bootcamp"  className="nav-link">
+             <NavLink to="./bootcamp"  className="nav-link">
               <Button
                   className=" primary-btn"
                   divClassName="primary-btn-txt"

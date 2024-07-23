@@ -27,7 +27,7 @@ export const Header = () => {
           </NavLink>
         </div>
         <div className="frame">
-          <NavLink to="/summer-bootcamp" className="nav-link" activeClassName="active">
+          <NavLink to="/bootcamp" className="nav-link" activeClassName="active">
             <div className="div">Events</div>
           </NavLink>
         </div>

@@ -59,7 +59,7 @@ const SuccessfulPayment = () => {
   };
 
   const HandleCancel = () => {
-    navigate('/summer-bootcamp');
+    navigate('/bootcamp');
   };
 
   return (
