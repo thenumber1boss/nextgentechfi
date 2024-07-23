@@ -157,7 +157,7 @@ export const HeroSm = () => {
               <img className="hero-image" src={HeroImg} alt="HeroImage" />
               <div className="group">
                 <div className="div-wrapper">
-                  <div className="text-wrapper">For ages 16-22</div>
+                  <div className="text-wrapper">For ages 15-30</div>
                 </div>
               </div>
             </div>
