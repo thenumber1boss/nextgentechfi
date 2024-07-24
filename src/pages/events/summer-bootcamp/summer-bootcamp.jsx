@@ -10,6 +10,7 @@ import Header from "../../../components/Header/header.jsx";
 import GritLogo from "../../../assets/images/grit-logo.png";
 import PlanetLogo from "../../../assets/images/planet-logo.png";
 import TellerPointLogo from "../../../assets/images/teller-point-logo.svg";
+import PopUpCard from "../../../assets/images/popup-card.png";
 import Line from "../../../assets/icons/line-2.svg";
 import group from "../../../assets/icons/group.png";
 import HeroImg from "../../../assets/images/HeroImage.png";
@@ -334,6 +335,7 @@ export const Benefits = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 480);
   const [isMediumScreen, setIsMediumScreen] = useState(window.innerWidth >= 480 && window.innerWidth < 780);
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 780);
+ 
 
   useEffect(() => {
     const handleResize = () => {
@@ -473,6 +475,7 @@ export const Partners = () => {
   const SummerBootcamp = () => {
     const [isSmallScreen, setIsSmallScreen] = useState(false);
     const [isMediumScreen, setIsMediumScreen] = useState(false);
+    const [showPopUp, setShowPopUp] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -487,8 +490,33 @@ export const Partners = () => {
       window.removeEventListener("resize", handleResize); // Clean up event listener
     };
   }, []);
+
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowPopUp(true);
+    }, 5000); // Show the popup after 30 seconds
+
+    return () => clearTimeout(timer); // Cleanup the timer on unmount
+  }, []);
+
+  const closeModal = () => {
+    setShowPopUp(false);
+  };
+
+
     return (
         <div className="summer-bootcamp">
+          {showPopUp && (
+        <div className="modal-overlay">
+          <div className="modal-content">
+            <div onClick={closeModal} style={{fontSize: '24px', color: 'white', display: 'flex', justifyContent: 'right', marginBottom: '10px', cursor: 'pointer'}}>X</div>
+            <NavLink to="/register" className="nav-link">
+            <img alt="pop-up" src={PopUpCard} style={{ width: isSmallScreen ? '95%' : '520px', height: 'auto', borderRadius: '16px'}} />
+            </NavLink>
+          </div>
+        </div>
+      )}
             < Header />
             {isMediumScreen ? (
                 <HeroSm />

@@ -48,7 +48,7 @@ export const HeroNextGen = () => {
             </div>
           </div>
           <div className="frame">
-            <NavLink to="/summer-bootcamp" className="nav-link">
+            <NavLink to="/bootcamp" className="nav-link">
             <Button state="secondary" 
              text="View our Events" 
              className="secondary-btn" 
