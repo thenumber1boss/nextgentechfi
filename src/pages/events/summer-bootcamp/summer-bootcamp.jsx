@@ -512,7 +512,7 @@ export const Partners = () => {
           <div className="modal-content">
             <div onClick={closeModal} style={{fontSize: '24px', color: 'white', display: 'flex', justifyContent: 'right', marginBottom: '10px', cursor: 'pointer'}}>X</div>
             <NavLink to="/register" className="nav-link">
-            <img alt="pop-up" src={PopUpCard} style={{ width: isSmallScreen ? '95%' : '520px', height: 'auto', borderRadius: '16px'}} />
+            <img alt="pop-up" src={PopUpCard} style={{ width: isSmallScreen ? '100%' : '520px', height: 'auto', borderRadius: '16px'}} />
             </NavLink>
           </div>
         </div>

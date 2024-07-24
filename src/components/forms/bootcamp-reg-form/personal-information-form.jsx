@@ -99,12 +99,12 @@ const PersonalInformation = () => {
       const popup = new Paystack();
 
       popup.newTransaction({
-        key: 'pk_test_b6aab05525fbb389ed9ca76eeeab24d2ea799bca',
+        key: 'pk_live_a882744023de13f5cb219683edd7e37b2d7ca8cc',
         firstName: data.firstName,
         lastName: data.lastName,
         phone: data.phone,
         email: data.email,
-        amount: 8500000, // Amount in kobo (85000 kobo = 85 NGN)
+        amount: 4500000, // Amount in kobo (85000 kobo = 85 NGN)
         currency: 'NGN',
         channels: ['card', 'bank', 'ussd'],
         metadata: {
