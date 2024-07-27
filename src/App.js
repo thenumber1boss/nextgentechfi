@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import './App.css';
 import SummerBootcamp from './pages/events/summer-bootcamp/summer-bootcamp.jsx';
 import LandingPage from './pages/landing-page/landing-page.jsx';
@@ -16,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/bootcamp" element={<SummerBootcamp />} />
+          <Route path="/summer-bootcamp" element={<Navigate to="/bootcamp" />} />
           <Route path="/register" element={<PersonalInformation />} />
           <Route path="/successful-payment" element={<SuccessfulPayment />} />
           <Route path="/complete-registration1" element={<CompleteRegistration1 />} />
