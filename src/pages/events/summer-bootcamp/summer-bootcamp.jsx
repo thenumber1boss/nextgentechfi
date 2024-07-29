@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from 'react-helmet';
 import "./summer-bootcamp.css";
 import "./summer-bootcamp2.css";
 import BenefitCard from "../../../components/benefit-card/benefit-card.jsx";
@@ -507,6 +508,20 @@ export const Partners = () => {
 
     return (
         <div className="summer-bootcamp">
+          <Helmet>
+        <title>Summer-Bootcamp</title>
+        <meta name="description" content="Discover coding, AI, Design(Figma/Canva), smart financial
+              strategies and lots more in a fun, dynamic environment. Learn
+              alongside new friends and industry experts. Ready for an
+              adventure?" />
+        <meta property="og:title" content="Summer-Bootcamp" />
+        <meta property="og:description" content="Discover coding, AI, Design(Figma/Canva), smart financial
+              strategies and lots more in a fun, dynamic environment. Learn
+              alongside new friends and industry experts. Ready for an
+              adventure?" />
+        <meta property="og:image" content="https://nextgentechfi.com/nextgen.jpg" />
+        <meta property="og:url" content="https://nextgentechfi.com/bootcamp" />
+      </Helmet>
           {showPopUp && (
         <div className="modal-overlay">
           <div className="modal-content">
@@ -517,6 +532,7 @@ export const Partners = () => {
           </div>
         </div>
       )}
+
             < Header />
             {isMediumScreen ? (
                 <HeroSm />
