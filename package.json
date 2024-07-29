@@ -30,7 +30,6 @@
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
-    "postbuild": "react-snap",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
