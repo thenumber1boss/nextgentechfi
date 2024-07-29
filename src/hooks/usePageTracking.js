@@ -8,9 +8,11 @@ const usePageTracking = () => {
   const location = useLocation();
 
   useEffect(() => {
-    gtag('config', 'G-85Z8W3FF36', {
-      page_path: location.pathname,
-    });
+    if (typeof window !== "undefined" && window.gtag) {
+      window.gtag('config', 'G-85Z8W3FF36', {
+        page_path: location.pathname,
+      });
+    }
   }, [location]);
 };
 
