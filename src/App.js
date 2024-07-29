@@ -7,8 +7,10 @@ import PersonalInformation from './components/forms/bootcamp-reg-form/personal-i
 import SuccessfulPayment from './components/forms/bootcamp-reg-form/successful-payment.jsx';
 import CompleteRegistration1 from './components/forms/bootcamp-reg-form/complete-registration1.jsx'
 import { ScrollToTop } from "./utility.js";
+import usePageTracking from './hooks/usePageTracking';
 
 function App() {
+  usePageTracking(); // Use the custom hook to track page views
   return (
     <Router>
       <div className="App">
