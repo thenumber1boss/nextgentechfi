@@ -10,10 +10,12 @@ import SuccessfulPayment from './components/forms/bootcamp-reg-form/successful-p
 import CompleteRegistration1 from './components/forms/bootcamp-reg-form/complete-registration1.jsx';
 import { ScrollToTop } from "./utility.js";
 import usePageTracking from './hooks/usePageTracking';
+import useMetaPixelTracking from './hooks/useMetaPixelTracking';
 import { Analytics } from '@vercel/analytics/react';
 
 function App() {
-  usePageTracking(); // Use the custom hook to track page views
+  usePageTracking();
+  useMetaPixelTracking();
   return (
     <div className="App">
       <ScrollToTop />
