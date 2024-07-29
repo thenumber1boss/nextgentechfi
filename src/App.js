@@ -10,6 +10,7 @@ import SuccessfulPayment from './components/forms/bootcamp-reg-form/successful-p
 import CompleteRegistration1 from './components/forms/bootcamp-reg-form/complete-registration1.jsx';
 import { ScrollToTop } from "./utility.js";
 import usePageTracking from './hooks/usePageTracking';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   usePageTracking(); // Use the custom hook to track page views
@@ -25,6 +26,7 @@ function App() {
         <Route path="/complete-registration1" element={<CompleteRegistration1 />} />
         {/* Add more routes here as needed */}
       </Routes>
+      <Analytics />
     </div>
   );
 }
