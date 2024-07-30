@@ -12,6 +12,7 @@ import { ScrollToTop } from "./utility.js";
 import usePageTracking from './hooks/usePageTracking';
 import useMetaPixelTracking from './hooks/useMetaPixelTracking';
 import { Analytics } from '@vercel/analytics/react';
+import InsertAffiliates from './components/affiliates/insert-affiliates.jsx';
 
 function App() {
   usePageTracking();
@@ -24,6 +25,7 @@ function App() {
         <Route path="/bootcamp" element={<SummerBootcamp />} />
         <Route path="/summer-bootcamp" element={<Navigate to="/bootcamp" />} />
         <Route path="/register" element={<PersonalInformation />} />
+        <Route path="/register-affiliates" element={<InsertAffiliates />} />
         <Route path="/successful-payment" element={<SuccessfulPayment />} />
         <Route path="/complete-registration1" element={<CompleteRegistration1 />} />
         {/* Add more routes here as needed */}

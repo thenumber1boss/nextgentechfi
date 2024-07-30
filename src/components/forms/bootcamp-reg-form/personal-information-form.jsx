@@ -75,7 +75,7 @@ const PersonalInformation = () => {
         throw new Error(result.message || 'Validation error');
       }
   
-      const { isCodeValid } = result;
+      const { isCodeValid, validatedCode } = result;
   
       if (!isCodeValid) {
         setErrorMessage('Invalid code');
@@ -97,7 +97,7 @@ const PersonalInformation = () => {
         lastName: data.lastName,
         phone: data.phone,
         email: data.email,
-        amount: 4500000, // Amount in kobo (85000 kobo = 85 NGN)
+        amount: 4500000, // Amount in kobo 
         currency: 'NGN',
         channels: ['card', 'bank', 'ussd'],
         metadata: {
@@ -112,7 +112,7 @@ const PersonalInformation = () => {
         onSuccess: async (transaction) => {
           setServerProcessing(true); // Set server processing state to true
           console.log('Payment successful:', transaction);
-
+        
           try {
             console.log('Sending transaction reference to server for verification...');
             const response = await fetch(`${config.API_BASE_URL}/api/verify-transaction`, {
@@ -122,13 +122,31 @@ const PersonalInformation = () => {
               },
               body: JSON.stringify({ reference: transaction.reference }), // Adjust this based on your data structure
             });
-
+        
             const result = await response.json();
-
+        
             if (response.ok) {
               console.log('Transaction verified successfully on server:', result);
-             // Include the transaction reference in the callback URL
-             setServerProcessing(false); // Set server processing state to false
+        
+              // Now, update the referrals for the validated code
+              const referralResponse = await fetch(`${config.API_BASE_URL}/api/update-referrals`, {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ code: validatedCode }), // Use the validated code from the earlier validation step
+              });
+        
+              const referralResult = await referralResponse.json();
+        
+              if (referralResponse.ok) {
+                console.log(referralResult.message); // Success message
+              } else {
+                console.error('Error updating referrals:', referralResult.message);
+              }
+        
+              // Include the transaction reference in the callback URL
+              setServerProcessing(false); // Set server processing state to false
               const successfulPaymentUrl = `/successful-payment?reference=${transaction.reference}`;
               navigate(successfulPaymentUrl);
             } else {
@@ -138,6 +156,7 @@ const PersonalInformation = () => {
             console.error('Error verifying transaction on server:', error);
           }
         },
+        
         onLoad: (response) => {
           console.log('onLoad: ', response);
         },

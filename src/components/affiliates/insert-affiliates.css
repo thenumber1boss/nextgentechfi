@@ -1,0 +1,55 @@
+/* InsertAffiliates.css */
+
+.affiliates-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+  }
+  
+  .affiliates-container h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .affiliates-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .affiliates-container textarea {
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none; /* Disable resizing */
+  }
+    
+  .affiliates-container button {
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .affiliates-container button:hover {
+    background-color: #0056b3; /* Darken on hover */
+  }
+  
+  .affiliates-container pre {
+    background-color: #e9ecef;
+    padding: 10px;
+    border-radius: 4px;
+    overflow: auto;
+    white-space: pre-wrap; /* Preserve whitespace and wrap lines */
+  }
+  
