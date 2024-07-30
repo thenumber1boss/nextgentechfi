@@ -33,8 +33,7 @@ const validationSchema = Yup.object().shape({
   lastName: Yup.string().required('Last Name is required'),
   email: Yup.string().email('Invalid email address').required('Email is required'),
   phone: Yup.string().required('Phone Number is required'),
-  schoolCode: Yup.string(),
-  inviteCode: Yup.string(),
+  code: Yup.string(),
 });
 
 
@@ -59,33 +58,27 @@ const PersonalInformation = () => {
     setLoading(true);
 
     try {
-      // Validate invite and school codes by querying the server
+      // Validate the code by querying the server
       const response = await fetch(`${config.API_BASE_URL}/api/validate-codes`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          inviteCode: data.inviteCode,
-          schoolCode: data.schoolCode,
+          code: data.code, 
         }),
       });
-
+  
       const result = await response.json();
-
+  
       if (!response.ok) {
         throw new Error(result.message || 'Validation error');
       }
-
-      const { isInviteCodeValid, isSchoolCodeValid } = result;
-
-      if (!isInviteCodeValid) {
-        setErrorMessage('Invalid invite code');
-        return;
-      }
-
-      if (!isSchoolCodeValid) {
-        setErrorMessage('Invalid school code');
+  
+      const { isCodeValid } = result;
+  
+      if (!isCodeValid) {
+        setErrorMessage('Invalid code');
         return;
       }
 
@@ -259,25 +252,15 @@ const PersonalInformation = () => {
             />
             <div className='field-error'>
             <div className='referral-div'>
-            <InputFields
-              type="text"
-              label="School code (if any)"
-              name="schoolCode"
-              className="referral-input"
-              error={errors.schoolCode}
-              register={register} // Pass the register function here
-              placeholder="Unique School code here"
-            />      
-
-            <InputFields
-              type="text"
-              label="Referral code (if any)"
-              name="inviteCode"
-              className="referral-input"
-              error={errors.inviteCode}
-              register={register} // Pass the register function here
-              placeholder="Enter invite code here"
-            />
+              <InputFields
+                type="text"
+                label="Referral Code (if any)"
+                name="code" // Changed to a single name
+                className="referral-input"
+                error={errors.code} // Adjusted error handling
+                register={register} // Pass the register function here
+                placeholder="Enter 7 alpha-numeric uppercase character"
+              />
             </div>
             <p className='code-error-message'>{errorMessage}</p>
             </div>
