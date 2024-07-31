@@ -98,7 +98,7 @@ const PersonalInformation = () => {
         lastName: data.lastName,
         phone: data.phone,
         email: data.email,
-        amount: 100, // Amount in kobo 
+        amount: 4500000, // Amount in kobo 
         currency: 'NGN',
         channels: ['card', 'bank', 'ussd'],
         metadata: {
