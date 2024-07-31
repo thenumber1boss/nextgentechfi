@@ -26,7 +26,7 @@ const InsertAffiliates = () => {
 
   return (
     <div className="affiliates-container">
-      <h1>Insert Affiliates</h1>
+      <h1>Register Affiliates</h1>
       <form onSubmit={handleSubmit}>
         <textarea
           value={names}
