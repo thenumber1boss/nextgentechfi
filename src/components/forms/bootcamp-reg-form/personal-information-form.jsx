@@ -120,7 +120,7 @@ const PersonalInformation = () => {
               headers: {
                 'Content-Type': 'application/json',
               },
-              body: JSON.stringify({ reference: transaction.reference }), // Adjust this based on your data structure
+              body: JSON.stringify({ reference: transaction.reference }), 
             });
         
             const result = await response.json();
@@ -129,7 +129,7 @@ const PersonalInformation = () => {
               console.log('Transaction verified successfully on server:', result);
         
               // Now, update the referrals for the validated code
-              const referralResponse = await fetch(`${config.API_BASE_URL}/api/update-referrals`, {
+              const referralResponse = await fetch(`${config.API_BASE_URL}/api/update-referral`, {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',
