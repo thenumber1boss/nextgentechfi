@@ -76,6 +76,7 @@ const PersonalInformation = () => {
       }
   
       const { isCodeValid, validatedCode } = result;
+      console.log('validated code:', validatedCode);
   
       if (!isCodeValid) {
         setErrorMessage('Invalid code');
@@ -127,6 +128,7 @@ const PersonalInformation = () => {
         
             if (response.ok) {
               console.log('Transaction verified successfully on server:', result);
+              console.log('using validated code to update referral count:', validatedCode);
         
               // Now, update the referrals for the validated code
               const referralResponse = await fetch(`${config.API_BASE_URL}/api/update-referral`, {
