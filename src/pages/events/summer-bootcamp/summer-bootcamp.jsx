@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet-async";
 import "./summer-bootcamp.css";
 import "./summer-bootcamp2.css";
 import BenefitCard from "../../../components/benefit-card/benefit-card.jsx";
