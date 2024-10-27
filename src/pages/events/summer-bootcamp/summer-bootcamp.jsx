@@ -491,7 +491,7 @@ export const Partners = () => {
     };
   }, []);
 
-
+{/*
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPopUp(true);
@@ -503,6 +503,8 @@ export const Partners = () => {
   const closeModal = () => {
     setShowPopUp(false);
   };
+
+  */
 
 
     return (
@@ -519,6 +521,8 @@ export const Partners = () => {
               adventure?" />
         <meta property="og:image" content="https://nextgentechfi.com/nextgen.jpg" />
         <meta property="og:url" content="https://nextgentechfi.com/bootcamp" />
+
+        
           {showPopUp && (
         <div className="modal-overlay">
           <div className="modal-content">

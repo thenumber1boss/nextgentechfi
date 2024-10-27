@@ -278,7 +278,7 @@ const PersonalInformation = () => {
                 label="Referral Code (if any)"
                 name="code" // Changed to a single name
                 className="referral-input"
-                error={errors.code} // Adjusted error handling
+                error={errors.code} 
                 register={register} // Pass the register function here
                 placeholder="Enter 7 alpha-numeric uppercase character"
               />

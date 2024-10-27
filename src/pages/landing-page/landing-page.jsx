@@ -180,6 +180,7 @@ const LandingPage = () => {
 
   return (
     <div className="landing-page">
+      {/* // PopUpNotification component commented out for now
       {showPopUp && (
         <div className="modal-overlay">
           <div className="modal-content">
@@ -187,11 +188,13 @@ const LandingPage = () => {
           </div>
         </div>
       )}
+      */} 
+      
       <Header />
       <HeroNextGen />
       <OurCommitment />
 
-      {/* Render either NatSm or UpcomingEvent component based on screen size.
+      {/* Render either NavigatingSuccessSm or NavigatingSuccess component based on screen size.
        breakpoint = 780px */}
 
       {isMediumScreen ? <NavigatingSuccessMdSm /> : <NavigatingSuccess />}

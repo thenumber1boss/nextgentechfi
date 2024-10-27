@@ -8,7 +8,7 @@ const InsertAffiliates = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch(`${config.API_BASE_URL}/api/insert-affiliates`, { // Use your server's API route
+    const response = await fetch(`${config.API_BASE_URL}/api/insert-affiliates`, { 
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
