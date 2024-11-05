@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import "./registration.css";
-import NextGenLogo from "../../../assets/images/tech-fi-3.png";
+import NextGenLogo from "../../../../../assets/images/tech-fi-3.png";
 import {
   Timeline,
   TimelineItem,
@@ -10,13 +10,13 @@ import {
   TimelineContent,
   TimelineDot,
 } from '@mui/lab';
-import { Button } from '../../UI/button/button';
+import { Button } from '../../../../../components/UI/button/button';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
 import { Typography } from '@mui/material';
 import { styled } from '@mui/system';
 import { useNavigate } from 'react-router-dom';
-import config from '../../../config';
+import config from '../../../../../config';
 
 const CustomTimelineItem = styled(TimelineItem)({
   '&::before': {

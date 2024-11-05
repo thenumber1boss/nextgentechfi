@@ -5,14 +5,14 @@ import { Route, Routes, Navigate } from 'react-router-dom';
 import './App.css';
 import SummerBootcamp from './pages/events/summer-bootcamp/summer-bootcamp.jsx';
 import LandingPage from './pages/landing-page/landing-page.jsx';
-import PersonalInformation from './components/forms/bootcamp-reg-form/personal-information-form.jsx';
-import SuccessfulPayment from './components/forms/bootcamp-reg-form/successful-payment.jsx';
-import CompleteRegistration1 from './components/forms/bootcamp-reg-form/complete-registration1.jsx';
+import PersonalInformation from './pages/events/summer-bootcamp/forms/bootcamp-reg-form/personal-information-form.jsx';
+import SuccessfulPayment from './pages/events/summer-bootcamp/forms/bootcamp-reg-form/successful-payment.jsx';
+import CompleteRegistration1 from './pages/events/summer-bootcamp/forms/bootcamp-reg-form/complete-registration1.jsx';
 import { ScrollToTop } from "./utility.js";
 import usePageTracking from './hooks/usePageTracking';
 import useMetaPixelTracking from './hooks/useMetaPixelTracking';
 import { Analytics } from '@vercel/analytics/react';
-import InsertAffiliates from './components/affiliates/insert-affiliates.jsx';
+import InsertAffiliates from './pages/affiliates/insert-affiliates.jsx';
 
 function App() {
   usePageTracking();

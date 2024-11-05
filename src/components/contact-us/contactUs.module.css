@@ -1,0 +1,130 @@
+.contactUs {
+    padding: 50px 140px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+  
+  .bg-light-blue {
+    background-color: #28a7451a;
+  }
+  
+  .bg-white {
+    background-color: #f8ffff;
+  }
+  
+  .frame {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 26px;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 24px;
+  }
+  
+  .title {
+    color: #1e1e1e;
+    font-family: "Montserrat-Medium", Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  
+  .subtitle {
+    color: #1e1e1e;
+    font-family: "Montserrat-Bold", Helvetica;
+    font-size: 32px;
+    font-weight: 700;
+  }
+  
+  .text {
+    color: #1e1e1e;
+    font-family: "Lato", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  
+  .email {
+    color: #007bff;
+    font-weight: 600;
+  }
+  
+  .phone {
+    color: #28a745;
+    font-weight: 600;
+  }
+  
+  .image {
+    max-width: 100%;
+    height: 400px;
+    border-radius: 10px;
+  }
+  
+  /* Overlay styling for small screens */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.8); /* Adjust opacity as needed */
+    -webkit-backdrop-filter: blur(10px) brightness(90%);
+    backdrop-filter: blur(10px) brightness(90%);
+    
+    z-index: 0;
+  }
+  
+  /* Styles specific to small screens */
+  @media (max-width: 768px) {
+    .contactUs {
+      padding: 50px 30px;
+      background-position: center;
+      background-size: cover;
+    }
+  
+    .title {
+      font-size: 16px;
+    }
+  
+    .subtitle {
+      font-size: 24px;
+    }
+  
+    .text {
+      font-size: 18px;
+    }
+  
+    .image {
+      display: none;
+    }
+  }
+  
+  /* Styles specific to extra small screens */
+  @media (max-width: 480px) {
+    .contactUs {
+      padding: 20px;
+    }
+  
+    .title {
+      font-size: 14px;
+    }
+  
+    .subtitle {
+      font-size: 20px;
+    }
+  
+    .text {
+      font-size: 14px;
+    }
+  }
+  

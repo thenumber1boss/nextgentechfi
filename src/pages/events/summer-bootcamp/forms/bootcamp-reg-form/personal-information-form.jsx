@@ -3,11 +3,11 @@ import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
-import { Button } from '../../UI/button/button';
-import { InputFields } from '../../UI/input-fields/input-fields';
+import { Button } from '../../../../../components/UI/button/button';
+import { InputFields } from '../../../../../components/UI/input-fields/input-fields';
 import "./registration.css";
-import NextGenLogo from "../../../assets/images/tech-fi-3.png";
-import config from '../../../config';
+import NextGenLogo from "../../../../../assets/images/tech-fi-3.png";
+import config from '../../../../../config';
 import Paystack from '@paystack/inline-js';
 import {
   Timeline,

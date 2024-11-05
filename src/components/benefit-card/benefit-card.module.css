@@ -1,4 +1,4 @@
-.benefit-card {
+.benefitCard {
     align-items: flex-start;
     display: flex;
     flex-direction: column;
@@ -8,14 +8,14 @@
     box-sizing: border-box;
   }
   
-  .benefit-card .clip {
+  .benefitCard .clip {
     border-radius: 100px;
     height: 50px;
     position: relative;
     width: 112px;
   }
   
-  .benefit-card .div {
+  .benefitCard .div {
     align-items: flex-start;
     align-self: stretch;
     display: flex;
@@ -27,7 +27,7 @@
     width: 100%;
   }
   
-  .benefit-card .heading {
+  .benefitCard .heading {
     color: #000000;
     font-family: "Lato-Medium", Helvetica;
     font-size: 24px;
@@ -39,7 +39,7 @@
     width: fit-content;
   }
   
-  .benefit-card .text-body {
+  .benefitCard .textBody {
     align-self: stretch;
     color: var(--gray-600);
     font-family: "Montserrat-Regular", Helvetica;
@@ -52,45 +52,45 @@
   
   /* Media queries for responsiveness */
   @media (max-width: 768px) {
-    .benefit-card {
+    .benefitCard {
       height: auto;
       padding: 15px;
     }
   
-    .benefit-card .heading {
+    .benefitCard .heading {
       font-size: 22px;
       line-height: 30px;
     }
   
-    .benefit-card .text-body {
+    .benefitCard .textBody {
       font-size: 18px;
       line-height: 30px;
     }
   }
   
   @media (max-width: 480px) {
-    .benefit-card {
+    .benefitCard {
       height: auto;
       padding: 10px;
       gap: 10px;
     }
   
 
-    .benefit-card .clip {
+    .benefitCard .clip {
         height: 25px;
         width: 38px;
       }
 
-    .benefit-card .heading {
+    .benefitCard .heading {
       font-size: 20px;
       line-height: 32px;
     }
 
-    .benefit-card .div {
+    .benefitCard .div {
         gap: 10px;
       }
   
-    .benefit-card .text-body {
+    .benefitCard .textBody {
       font-size: 14px;
       line-height: 28px;
     }

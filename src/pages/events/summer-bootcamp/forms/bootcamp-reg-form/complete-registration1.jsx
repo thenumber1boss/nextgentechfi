@@ -1,6 +1,6 @@
 import * as React from 'react';
 import "./registration.css";
-import NextGenLogo from "../../../assets/images/tech-fi-3.png"
+import NextGenLogo from "../../../../../assets/images/tech-fi-3.png"
 import {
   Timeline,
   TimelineItem,

@@ -1,13 +1,13 @@
 import React from "react";
-import "./benefit-card.css";
+import styles from "./benefit-card.module.css";
 
 const BenefitCard = ({ heading, textBody, clipColor }) => {
   return (
-    <div className="benefit-card" >
-      <div className="clip" style={{ backgroundColor: clipColor }} />
-      <div className="div">
-        <h2 className="heading">{heading}</h2>
-        <p className="text-body">
+    <div className={styles.benefitCard} >
+      <div className={styles.clip} style={{ backgroundColor: clipColor }} />
+      <div className={styles.div}>
+        <h2 className={styles.heading}>{heading}</h2>
+        <p className={styles.textBody}>
           {textBody}
         </p>
       </div>

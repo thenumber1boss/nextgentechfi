@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./summer-bootcamp.css";
 import "./summer-bootcamp2.css";
 import Footer from "../../../components/footer/footer.jsx";
-import ContactUs from "../../../components/contact-us/contact-us.jsx";
-import ContactUsSm from "../../../components/contact-us/contact-us-sm.jsx";
+import ContactUs from "../../../components/contact-us/contactUs";
 import Header from "../../../components/Header/header.jsx";
 import Line3 from '../../../assets/icons/line-3.svg'
 
@@ -111,16 +110,8 @@ import { Hero,
             <WhatYouWillLearn />
             <ImageAndDivider />
             <Benefits />
-            <Partners />
-            {isSmallScreen ? (
-                <ContactUsSm 
-                backgroundColorClass="bg-white" 
-                />
-            ) : (
-                <ContactUs 
-                backgroundColorClass="bg-white" 
-                />
-            )}
+            <Partners />  
+            <ContactUs backgroundColorClass="bg-white" />
             < Footer />
           </div>
       );
