@@ -8,10 +8,8 @@ import { HeroNextGen,
         OurCommitment,
         ExploreEventsSection,
         NavigatingSuccess,
-        NavigatingSuccessMdSm
         } from "./sections";
-        import UpcomingEvent from "../../components/upcoming-event/upcoming-event.jsx";
-        import UpcomingEventSm from "../../components/upcoming-event/upcoming-event-sm.jsx";
+        import UpcomingEvent from "../../components/upcoming-event/upcoming-event-cmb.jsx";
 import SummerBootcampImage from "../../assets/images/summer-bootcamp-image.png";
 import PopUpNotification from "../../components/pop-ups/bootcamp-pop-up/bootcamp-pop-up.jsx";
 
@@ -79,37 +77,27 @@ const LandingPage = () => {
       {/* Render either NavigatingSuccessSm or NavigatingSuccess component based on screen size.
        breakpoint = 780px */}
 
-      {isMediumScreen ? <NavigatingSuccessMdSm /> : <NavigatingSuccess />}
-
-      {/* Render either UpcomingEventSm or UpcomingEvent component based on screen size.
-       breakpoint = 480px */}
-      {isSmallScreen ? (
-        <UpcomingEventSm
-          badge={badge}
-          image={image}
-          heading={heading}
-          supportingText={supportingText}
-          button1Text={button1Text}
-          button2Text={button2Text}
-        />
-      ) : (
+      <NavigatingSuccess />
+      
         <UpcomingEvent
           badge={badge}
           image={image}
           heading={heading}
           supportingText={supportingText}
           button1Text={button1Text}
+          link1="/register"
+          link2="/bootcamp"
           button2Text={button2Text}
         />
-      )}
-      <ExploreEventsSection />
-      
-        <ContactUs backgroundColorClass="bg-light-blue" />
+        <ExploreEventsSection />
+        <ContactUs 
+        backgroundColorClass="bg-light-blue" 
+        />
     
 
-      <Footer />
-    </div>
-  );
-};
+        <Footer />
+      </div>
+    );
+  };
 
 export default LandingPage;

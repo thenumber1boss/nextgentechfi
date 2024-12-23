@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import './button.css';
 
-export const Button = ({ className, divClassName, state, text, onClick, type, loading }) => {
+export const Button = ({ className, divClassName, state, text, onClick, type, link, loading }) => {
   return (
     <button
       className={`button ${className} ${state}`}

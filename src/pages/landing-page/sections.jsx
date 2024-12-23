@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./landing-page.css";
 import { NavLink } from "react-router-dom";
 import { HashLink as Link } from 'react-router-hash-link';
-import { Button } from "../../components/UI/button/button.jsx";
+import { Button } from "../../components/UI/button/button1.jsx";
 import ExploreEventsCard from "../../components/explore-events-card/explore-events-card.jsx";
 import EventImage1 from "../../assets/images/EventImage1.png";
 import EventImage2 from "../../assets/images/EventImage2.png";
@@ -78,85 +78,94 @@ export const HeroNextGen = () => {
     );
   };
 
-  // Navigating Success Section 
+
+
   const features = [
     {
       icon: StatusUp,
       image: Image1,
       title: "Upskilling in Technology",
       text: "Master essential tech skills to stay relevant in today's competitive job market. Whether you're starting your career or advancing in a tech-driven role, our programs ensure you have the expertise employers seek.",
-      className: "featured-icon-instance"
+      className: "feature-icon-upskilling",
+      color: "heading-blue"
     },
     {
       icon: Coin,
       image: Image2,
       title: "Financial Management Mastery",
       text: "Learn the art of financial management to effectively handle the rewards of technology investments. Our courses empower you to maximize earnings, manage finances wisely, and achieve long-term financial security.",
-      className: "design-component-instance-node"
+      className: "feature-icon-finance",
+      color: "heading-orange"
     },
     {
       icon: Chart,
       image: Image3,
       title: "Integration for Business Growth",
       text: "Discover how integrating technology can optimize business processes, drive innovation, and achieve sustainable growth. Gain insights from industry experts and learn practical strategies to transform your business.",
-      className: "featured-icon-2"
+      className: "feature-icon-growth",
+      color: "heading-green"
     }
   ];
-
-  const NavigatingSuccess = () => {
+  
+  export const NavigatingSuccess = () => {
+    const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 780);
+  
+    useEffect(() => {
+      const handleResize = () => setIsLargeScreen(window.innerWidth > 780);
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }, []);
+  
     return (
       <div className="navigating-success">
-        <div className="container">
-          <p className="heading">Navigating Success with Tech and Financial Expertise</p>
+        <div className="navigating-success-header">
+          <h3 className="heading">Navigating Success with Tech and Financial Expertise</h3>
         </div>
-        <div className="content-wrapper">
-          <div className="content">
-            {features.map((feature, index) => (
-              <div className="feature-text" key={index}>
-                <FeaturedIcon
-                  className={feature.className}
-                  color="brand"
-                  size="lg"
-                  theme="light-outline"
-                  icon={feature.icon}
-                />
-                <div className="content-2">
-                  <div className="text-and-supporting">
-                    <div className="text">{feature.title}</div>
-                    <p className="supporting-text">{feature.text}</p>
+        <div className={`navigating-success-content ${isLargeScreen ? 'large-screen' : 'small-screen'}`}>
+          {isLargeScreen ? (
+            <>
+              <div className="features">
+                {features.map((feature, index) => (
+                  <div className="feature-item" key={index}>
+                    <FeaturedIcon
+                      className={feature.className}
+                      color="brand"
+                      size="lg"
+                      theme="light-outline"
+                      icon={feature.icon}
+                    />
+                    <div className="feature-text">
+                      <h3 className="feature-title">{feature.title}</h3>
+                      <p className="feature-description">{feature.text}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="image">
+                <img src={NavigatingSuccessImage} alt="Navigating Success" />
+              </div>
+            </>
+          ) : (
+            <div className="features-small">
+              {features.map((feature, index) => (
+                <div className="feature-item-small" key={index}>
+                  <div className="feature-image">
+                    <img src={feature.image} alt={feature.title} />
+                  </div>
+                  <div className="feature-text-small">
+                    <h3 className={`feature-title-small ${feature.color}`} >{feature.title}</h3>
+                    <p className="feature-description-small">{feature.text}</p>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
-          <div className="content-3">
-            <img src={NavigatingSuccessImage} alt="Navigating Success" />
-          </div>
-        </div>
-      </div>
-    );
-  };
-  
-  const NavigatingSuccessMdSm = () => {
-    return (
-      <div className="navigating-success-md-sm">
-        <div className="text-wrapper">Navigating Success with Tech and Financial Expertise</div>
-        <div className="frame">
-          {features.map((feature, index) => (
-            <div className="div" key={index}>
-              <img className="rectangle" alt="Rectangle" src={feature.image} />
-              <div className="frame-2">
-                <div className="text-wrapper-2">{feature.title}</div>
-                <p className="supporting-text">{feature.text}</p>
-              </div>
+              ))}
             </div>
-          ))}
+          )}
         </div>
       </div>
     );
   };
   
-  export { NavigatingSuccess, NavigatingSuccessMdSm };
+
 
   // Our Comitment Section
 

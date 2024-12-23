@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { Button } from "../UI/button/button";
-import "./header.css";
+import { Button } from "../UI/button/button1";
+import styles from "./header.module.css"; // Import styles as a CSS module
 import logo from "../../assets/images/tech-fi-3.png";
 import searchIcon from "../../assets/icons/search.svg";
 import cancel from "../../assets/images/iconoir-cancel.svg";
@@ -17,83 +17,79 @@ export const Header = () => {
     setMenuActive(!menuActive);
   };
 
-
   return (
-    <div className="header">
-      <div className="pages">
-        <div className="frame">
-          <NavLink exact to="/" className="nav-link" activeClassName="active">
-            <div className="div">Home</div>
+    <div className={styles.header}>
+      <div className={styles.pages}>
+        <div className={styles.frame}>
+          <NavLink exact to="/" className={({ isActive }) => `${styles.navLink} ${isActive ? styles.active : ""}`}>
+            <div className={styles.div}>Home</div>
           </NavLink>
         </div>
-        <div className="frame">
-          <NavLink to="/bootcamp" className="nav-link" activeClassName="active">
-            <div className="div">Events</div>
+        <div className={styles.frame}>
+          <NavLink to="/bootcamp" className={({ isActive }) => `${styles.navLink} ${isActive ? styles.active : ""}`}>
+            <div className={styles.div}>Events</div>
           </NavLink>
         </div>
-        <div className="frame">
-          {/*Login Link set to inactive state when, dashboard is ready, remove conditional render */}
-        {isLinkActive ? (
-        <NavLink to="/login" className="nav-link" activeClassName="active">
-          <div className="div">Login</div>
-        </NavLink>
-      ) : (
-        <div className="div nav-link inactive">Login</div>
-      )}
+        <div className={styles.frame}>
+          {isLinkActive ? (
+            <NavLink to="/login" className={({ isActive }) => `${styles.navLink} ${isActive ? styles.active : ""}`}>
+              <div className={styles.div}>Login</div>
+            </NavLink>
+          ) : (
+            <div className={`${styles.div} ${styles.navLink} ${styles.inactive}`}>Login</div>
+          )}
         </div>
       </div>
       <NavLink exact to="/">
-        <img className="tech-fi" alt="Tech fi" src={logo} />
+        <img className={styles.techFi} alt="Tech fi" src={logo} />
       </NavLink>
-      <div className="vuesax-linear-search-wrapper">
-        <img className="search" alt="searchIcon" src={searchIcon} />
-        <input className="searchBar" type="text" />
-        <div className="hamburgerIcon-instance" onClick={toggleMenu}>
+      <div className={styles.searchWrapper}>
+        <img className={styles.search} alt="searchIcon" src={searchIcon} />
+        <input className={styles.searchBar} type="text" />
+        <div className={styles.hamburgerIcon} onClick={toggleMenu}>
           <HiMiniBars3BottomLeft size={30} />
         </div>
       </div>
+      <Button
+        className="primary-btn"
+        divClassName="primary-btn-txt"
+        state="primary"
+        text="Register"
+        link="/register"
+        linkClassName={styles.hide}
+      />
 
-      <NavLink className="nav-link hide" to="/register">
-        <Button
-          className="primary-btn"
-          divClassName="primary-btn-txt"
-          state="primary"
-          text="Register"
-        />
-      </NavLink>
-
-      <div className={`mobile-menu ${menuActive ? "active" : ""} `}>
-        <div className="div">
-          <div className="top-header">
-            <img className="tech-fi" src={logo} alt="tech-fi-mobile" />
+      <div className={`${styles.mobileMenu} ${menuActive ? styles.active : ""}`}>
+        <div className={styles.div}>
+          <div className={styles.topHeader}>
+            <img className={styles.techFi} src={logo} alt="tech-fi-mobile" />
             <img
-              className="iconoir-cancel"
+              className={styles.iconCancel}
               src={cancel}
               alt="Close"
               onClick={toggleMenu}
             />
           </div>
 
-          <img className="line" src={line} alt="Line" size={20} />
-          <div className="frame">
-            <NavLink exact to="/" className="nav-link" activeClassName="active">
-              <div className="text-wrapper">Home</div>
+          <div className={styles.line}></div>
+          <div className={styles.frame}>
+            <NavLink exact to="/" className={({ isActive }) => `${styles.navLink} ${isActive ? styles.active : ""}`}>
+              <div className={styles.textWrapper}>Home</div>
             </NavLink>
-            <NavLink to="/summer-bootcamp" className="nav-link" activeClassName="active">
-              <div className="text-wrapper">Events</div>
+            <NavLink to="/summer-bootcamp" className={({ isActive }) => `${styles.navLink} ${isActive ? styles.active : ""}`}>
+              <div className={styles.textWrapper}>Events</div>
             </NavLink>
-            <NavLink to="/login" className="nav-link" activeClassName="active">
-              <div className="text-wrapper">Login</div>
+            <NavLink to="/login" className={({ isActive }) => `${styles.navLink} ${isActive ? styles.active : ""}`}>
+              <div className={styles.textWrapper}>Login</div>
             </NavLink>
 
-            <NavLink className="nav-link" to="/register">
             <Button
-              className="primary-btn-stretch"
+              className="primary-btn"
               divClassName="primary-btn-txt"
               state="primary"
               text="Register"
+              link="/register"
             />
-            </NavLink>
           </div>
         </div>
       </div>

@@ -1,26 +1,21 @@
 import React from "react";
-import "./explore-events-card.css";
+import styles from "./explore-events-card.module.css";
 
-//explore more reusable component. 
 //Takes heading, body of text and image as props.
 
 const ExploreEventsCard = ({ heading, supportingText, image }) => {
   return (
-    <div className="explore-events-card">
-      <img className="image" alt={`Nextgen ${heading} event`} src={image} />
-      <div className="frame">
-        <div className="content">
-          <div className="div">
-            <div className="div">
-              <div className="heading">{heading}</div>
-              <p className="supporting-text">
+    <div className={styles.exploreEventsCard}>
+      <img className={styles.image} alt={`Nextgen ${heading} event`} src={image} />
+      <div className={styles.frame}>
+            <div className={styles.div}>
+              <div className={styles.heading}>{heading}</div>
+              <p className={styles.eventText}>
                 {supportingText}
               </p>
-            </div>
-          </div>
         </div>
-        <div className="div-wrapper">
-          <div className="text-wrapper">Learn more</div>
+        <div className={styles.CTAWrapper}>
+          <div className={styles.CTA}>Learn more</div>
         </div>
       </div>
     </div>

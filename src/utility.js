@@ -24,4 +24,19 @@ export const ScrollToTop = () => {
 };
 
 
+export const scrollToAnchor = (anchorLink, offset = 100) => {
+  const targetElement = document.querySelector(anchorLink);
+  if (targetElement) {
+    const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+    const offsetPosition = elementPosition - offset; // Subtract the offset (default= 100px)
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth',
+    });
+  }
+};
+
+
+
   

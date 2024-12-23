@@ -1,4 +1,4 @@
-.explore-events-card {
+.exploreEventsCard {
   align-items: flex-start;
   display: flex;
   flex-wrap: wrap;
@@ -6,14 +6,14 @@
   position: relative;
 }
 
-.explore-events-card .image {
+.exploreEventsCard .image {
   height: 227px;
   object-fit: cover;
   width: 416px;
   border-radius: 13.76px 13.76px;
 }
 
-.explore-events-card .frame {
+.exploreEventsCard .frame {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
@@ -21,15 +21,8 @@
   flex: 1;
 }
 
-.explore-events-card .content {
-  align-items: flex-start;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 100%;
-}
 
-.explore-events-card .div {
+.exploreEventsCard .div {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
@@ -37,14 +30,14 @@
   width: 100%;
 }
 
-.explore-events-card .heading {
+.exploreEventsCard .heading {
   color: var(--black);
   font-family: "Montserrat-SemiBold", Helvetica;
   font-size: 22px;
   font-weight: 600;
 }
 
-.explore-events-card .supporting-text {
+.exploreEventsCard .eventText {
   color: var(--gray-600);
   font-family: "Lato-Regular", Helvetica;
   font-size: 20px;
@@ -52,7 +45,7 @@
   line-height: 1.5;
 }
 
-.explore-events-card .div-wrapper {
+.exploreEventsCard .CTAWrapper {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -60,7 +53,7 @@
   border-bottom: 2px solid var(--primary-colour);
 }
 
-.explore-events-card .text-wrapper {
+.exploreEventsCard .CTA {
   color: var(--primary-colour);
   font-family: "Lato-SemiBold", Helvetica;
   font-size: 18px;
@@ -70,23 +63,23 @@
 
 /* Media queries for small screens */
 @media (max-width: 768px) {
-  .explore-events-card {
+  .exploreEventsCard {
     flex-direction: column;
     gap: 20px;
   }
 
-  .explore-events-card .heading {
+  .exploreEventsCard .heading {
     font-size: 20px;
   }
 
-  .explore-events-card .supporting-text {
+  .exploreEventsCard .eventText {
     font-size: 18px;
   }
 }
 
 
 @media (max-width: 480px) {
-  .explore-events-card {
+  .exploreEventsCard {
     gap: 20px;
       align-items: center;
       display: flex;
@@ -96,30 +89,30 @@
       overflow: hidden;
   }
 
-  .explore-events-card .frame {
+  .exploreEventsCard .frame {
     background-color: #ffffff;
     border: 0.86px solid #f2f2f7;
     border-top: 0;
     padding: 17.2px;
   }
 
-  .explore-events-card .image {
+  .exploreEventsCard .image {
     height: auto;
     object-fit: cover;
     width: 100%;
     border-radius: 0;
   }
 
-  .explore-events-card .heading {
+  .exploreEventsCard .heading {
     font-size: 20px;
     line-height: 26.7px;
   }
 
-  .explore-events-card .supporting-text {
+  .exploreEventsCard .eventText {
     font-size: 14px;
   }
 
-  .explore-events-card .div-wrapper {
+  .exploreEventsCard .CTAWrapper {
     border-bottom: 1.72px solid #007bff;
     gap: 8.6px;
     height: 48px;
@@ -127,7 +120,7 @@
     padding: 16px 32px;
   }
 
-.explore-events-card .text-wrapper {
+.exploreEventsCard .CTA {
   font-size: 16px;
   line-height: 26.7px;
 }

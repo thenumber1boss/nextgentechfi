@@ -11,20 +11,20 @@
 }
 
 /* Remove underline from links */
-.header .nav-link {
+.header .navLink {
   text-decoration: none;
 }
 
 /* Optional: Add hover effect */
-.header .nav-link .text-wrapper:hover,
-.header .nav-link .div:hover {
+.header .navLink .textWrapper:hover,
+.header .navLink .div:hover {
   color: var(--secondary-colour); 
   text-decoration: none; 
 }
 
 /* Optional: Add hover effect */
-.header .nav-link.active .text-wrapper:hover,
-.header .nav-link.active .div:hover {
+.header .navLink.active .textWrapper:hover,
+.header .navLink.active .div:hover {
   color: var(--primary-colour); 
 }
 
@@ -32,7 +32,8 @@
   pointer-events: none;
 }
 
-.header .active .div {
+.header .active .div,
+.header .mobileMenu .active .textWrapper {
   font-weight: bold;
   color: var(--primary-colour);
 }
@@ -70,13 +71,13 @@
   width: fit-content;
 }
 
-.header .tech-fi {
+.header .techFi {
   height: 36px;
   object-fit: cover;
   width: 135px;
 }
 
-.header .vuesax-linear-search-wrapper {
+.header .searchWrapper {
   align-items: flex-start;
   background-color: #ffffff;
   border-radius: 16px;
@@ -87,7 +88,7 @@
   width: 249px;
 }
 
-.header .vuesax-linear-search {
+.header .searchIcon{
   height: 24px !important;
   position: relative !important;
   width: 24px !important;
@@ -107,11 +108,11 @@
   font-weight: 400 !important;
 }
 
-.hamburgerIcon-instance {
+.hamburgerIcon {
   display: none;
 }
 
-.mobile-menu {
+.mobileMenu {
   display: none;
 }
 
@@ -124,7 +125,7 @@
     align-items: center;
   }
 
-  .header .tech-fi {
+  .header .techFi {
     position: static;
     margin: 10px 0;
   }
@@ -140,7 +141,7 @@
     padding: 8px 10px;
   }
 
-  .header .vuesax-linear-search-wrapper {
+  .header .searchWrapper {
     width: fit-content;
     height: auto;
   }
@@ -149,9 +150,6 @@
     width: 100%;
   }
 
-  /* .header .design-component-instance-node {
-      margin-top: 10px;
-    } */
 }
 
 @media (max-width: 480px) {
@@ -159,7 +157,7 @@
     font-size: 16px;
   }
 
-  .header .vuesax-linear-search-wrapper {
+  .header .searchWrapper {
     padding: 8px 10px;
   }
 
@@ -175,7 +173,7 @@
     display: none !important;
   }
 
-  .vuesax-linear-search-wrapper {
+  .searchWrapper {
     height: auto;
     display: inline-flex;
     gap: 20px;
@@ -187,63 +185,89 @@
     display: none;
   }
 
-  .hamburgerIcon-instance {
+  .hamburgerIcon {
     display: block;
     height: fit-content;
     margin-left: 1rem;
   }
-  .mobile-menu {
+  .mobileMenu {
     display: none;
     position: fixed;
     top: 0;
-    width: fit-content;
+    width: 100vw;
     background-color: white;
     z-index: 1000;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 10px 20px 20px 20px;
-    width: 402px;
     border: 2px solid gray;
     border-radius: 10px;
   }
-  .mobile-menu .top-header {
-    width: 342px;
+
+   .mobileMenu .div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 2rem;
+    gap: 1rem;
+  }
+
+  .mobileMenu .topHeader {
+    padding: 0 2rem;
     display: flex;
     justify-content: space-between;
   }
-  .mobile-menu .iconoir-cancel {
+
+  .mobileMenu .iconCancel {
     cursor: pointer;
     /* margin-bottom: 2; */
     width: 20px;
   }
-  .mobile-menu .frame {
+
+  .mobileMenu .line {
+    height: .1rem;
+    background: var(--primary-colour);
+  }
+  .mobileMenu .frame {
     display: flex;
     flex-direction: column;
     align-items: start;
-    width: 342px;
     position: relative;
   }
 
-  .mobile-menu.active {
+  .mobileMenu.active {
     display: flex;
   }
 
-  .mobile-menu .div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
+ 
 
-  .mobile-menu .button-2 {
+  .mobileMenu .button-2 {
     width: 80%;
     text-align: center;
     margin-top: 1rem;
   }
 
-  .mobile-menu .text-wrapper {
+  .mobileMenu .textWrapper {
     display: block;
     padding: 0.5rem;
+    color: #000000;
+    font-family: "Lato-Regular", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 32px;
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
   }
+
+  .link {
+    font-size: 14rem;
+  }
+
+
+
+  
 }
